@@ -16,6 +16,13 @@ module.exports = {
        '100': 100,
       }
     },
+    screens: {
+      'sm': {'max': '600px'},
+      'md': {'min': '601x'},
+      'lg': {'min': '960px'},
+      'xl': {'min': '1280px'},
+      '2xl': {'min': '1920px'},
+    }
   },
   variants: {
     extend: {},
