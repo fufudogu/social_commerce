@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen flex flex-col justify-center items-center gap-8">
+        <div class="">
+            <a href="#" class="inline-block px-2 py-1 border border-gray-300 text-xs font-kanit rounded-full bg-white hover:bg-gray-200">
+            <svg class="inline-block w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+            </svg> ลบทั้งหมด</a>  
+            <a href="#" onclick="openModal()" class="inline-block px-2 py-1 border border-transparent text-xs font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg> เพิ่มสินค้า
+            </a>
+            <a href="#" class="inline-block px-2 py-1 border border-gray-300 text-xs font-kanit rounded-full bg-white hover:bg-gray-200">
+                <svg class="inline-block w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2">
+                    </path>
+                </svg> คัดลอกลิ้ง
+            </a>
+            <div class="my-4">
+                <a href="#" class="px-4 py-1 border border-gray-600 text-base font-kanit font-medium rounded-full text-gray-600 text-center bg-white hover:bg-gray-100 hover:bg-gray-50">
+                    บันทึกร่าง
+                </a>
+                <a href="#" class="px-4 py-1 border border-transparent text-base font-kanit font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                    บันทึกและส่งข้อความ
+                </a>
+            </div>
+            <div class="my-4">
+                <button class="px-3 py-1 rounded-full text-gray-500 align-top hover:text-gray-700 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                    <svg class="inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span class="text-sm">ตั้งค่า</span>
+                </button>
+            </div>
+            <div class="my-4">
+                <a href="#" class="w-full flex items-center justify-center px-4 py-1 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                    Action
+                </a>
+            </div>
+            <div class="my-4">
+                <a href="#" class="flex-1 px-8 py-2 border border-transparent font-kanit text-base font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">เพิ่มช่องทาง</a>
+            </div>
+            <div class="my-4">
+                <button class="inline px-2 py-1 border border-gray-400 text-xs rounded-full text-gray-400 font-kanit text-center bg-gray-50 hover:bg-indigo-100">
+                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                      </svg> แก้ไข
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+
+</body>
+
+</html>
