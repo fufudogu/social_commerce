@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen flex flex-col justify-center items-center gap-8">
+        <div class="w-96">
+            <div class="border-b">
+                <button
+                    class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                    data-toggle="collapse" data-target=".collapse.info" data-text="Collapse">
+                    <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>ข้อมูลรายการ
+                </button>
+                <div class="xl:pl-6 mb-3 collapse info">
+                    xxx
+                </div>
+            </div>
+            
+            <div class="border-b">
+                <button
+                    class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                    data-toggle="collapse" data-target=".collapse.note" data-text="Collapse">
+                    <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>หมายเหตุหรือโน๊ต
+                </button>
+                <div class="xl:pl-6 mb-3 collapse note">
+                    xxx
+                </div>
+            </div>
+
+            <!-- Product Collapse -->
+            <div class="border-b">
+                <button
+                    class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                    data-toggle="collapse" data-target=".collapse.product" data-text="Collapse">
+                    <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>สินค้า
+                </button>
+
+                <div class="xl:pl-6 mb-3 collapse product">
+                    xxx
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Collapse -->
+    <script>
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+
+        window.addEventListener('click', (ev) => {
+            const elm = ev.target;
+
+            // Toggle Collapse
+            if (triggers.includes(elm)) {
+                const selector = elm.getAttribute('data-target');
+                collapse(selector, 'toggle');
+                
+                const child = elm.children[0];
+                child.classList.toggle('-rotate-90');
+            }
+        }, false);
+
+        const fnmap = {
+            'toggle': 'toggle',
+            'show': 'add',
+            'hide': 'remove'
+        };
+        const collapse = (selector, cmd) => {
+            const targets = Array.from(document.querySelectorAll(selector));
+            targets.forEach(target => {
+                target.classList[fnmap[cmd]]('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

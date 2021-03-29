@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen flex flex-col justify-center items-center gap-8">
+        <div class="w-96">
+            <div class="tabs">
+                <div class="bg-white">
+
+                    <!-- ///////////////////////// -->
+                    <!-- Tabs -->
+                    <!-- ///////////////////////// -->
+
+                    <!-- Classes @ul>li>a
+                        Active: p-2 block text-sm text-indigo-600 hover:bg-indigo-50 border-b-4 border-indigo-600
+                        Default: p-2 block text-sm text-gray-700 hover:bg-indigo-50 border-b-4 border-transparent
+                    -->
+
+                    <ul class="flex flex-row items-center justify-between border-t border-b">
+                        <li class="w-1/3 text-center">
+                            <a href="#"
+                                class="t-btn p-2 block text-sm font-kanit text-indigo-600 hover:bg-indigo-50 border-b-4 border-indigo-600"
+                                data-name="order">
+                                <span class="pointer-events-none">รายการขาย</span>
+                            </a>
+                        </li>
+                        <li class="w-1/3 text-center">
+                            <a href="#"
+                                class="t-btn p-2 block text-sm font-kanit text-gray-700 hover:bg-indigo-50 border-b-4 border-gray-200"
+                                data-name="payment">
+                                <span class="pointer-events-none">ชำระเงิน</span>
+                            </a>
+                        </li>
+                        <li class="w-1/3 text-center">
+                            <a href="#"
+                                class="t-btn p-2 block text-sm font-kanit text-gray-700 hover:bg-indigo-50 border-b-4 border-gray-200"
+                                data-name="logistic">
+                                <span class="pointer-events-none">การจัดส่ง</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="p-3 lg:p-5">
+
+                    <!-- Order Panel -->
+                    <div class="t-panel order active">
+
+                        <!-- Info Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.info" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>ข้อมูลรายการ
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse info">
+                                xxx
+                            </div>
+                        </div>
+
+                        <!-- Product Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.product" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>สินค้า
+                            </button>
+
+                            <div class="xl:pl-6 mb-3 collapse product">
+                                xxx
+                            </div>
+                        </div>
+
+                        <!-- Note Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.note" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>หมายเหตุหรือโน๊ต
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse note">
+                                xxx
+                            </div>
+                        </div>
+
+                        <!-- Summary Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.summary" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>สรุปรายการ
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse summary">
+                                xxx
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Panel -->
+                    <div class="t-panel payment">
+
+                        <!-- Payment Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.payment" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>ข้อมูลชำระเงิน
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse payment">
+                                xxx
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipment Panel -->
+                    <div class="t-panel logistic">
+
+                        <!-- Transer Collapse -->
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.transfer" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>การโอนสินค้า
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse transfer">
+                                xxx
+                            </div>
+                        </div>
+
+                        <div class="border-b">
+                            <button
+                                class="w-full py-2 text-left text-sm font-kanit rounded-md hover:underline focus:outline-none"
+                                data-toggle="collapse" data-target=".collapse.logistic" data-text="Collapse">
+                                <svg class="inline w-4 h-4 transform transition-transform mr-2 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>ข้อมูลการจัดส่ง
+                            </button>
+                            <div class="xl:pl-6 mb-3 collapse logistic">
+                                xxx
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabs -->
+    <script>
+        function initTab(elem) {
+            document.addEventListener('click', function (e) {
+                if (!e.target.matches(elem + ' .t-btn')) return;
+                else {
+                    if (!e.target.classList.contains('active')) {
+                        findActiveElementAndRemoveIt(elem + ' .t-btn');
+                        findActiveElementAndRemoveIt(elem + ' .t-panel');
+                        e.target.classList.add('active', 'text-indigo-600', 'border-indigo-600');
+
+                        setTimeout(function () {
+                            var panel = document.querySelectorAll(elem + ' .t-panel.' + e.target.dataset
+                                .name);
+                            Array.prototype.forEach.call(panel, function (el) {
+                                el.classList.add('active');
+                            });
+                        }, 0);
+                    }
+                }
+            });
+        }
+
+        function findActiveElementAndRemoveIt(elem) {
+            var elementList = document.querySelectorAll(elem);
+
+            //console.log(elem, elementList);
+            Array.prototype.forEach.call(elementList, function (e) {
+                e.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+
+                //console.log(e);
+            });
+        }
+
+        initTab('.tabs');
+    </script>
+    <style>
+        .t-panel {
+            display: none;
+        }
+
+        .t-panel.active {
+            display: block;
+        }
+    </style>
+
+</body>
+
+</html>
