@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="h-screen flex flex-col justify-center items-center gap-8">
+        <div class="w-80">
+            <!-- ///////// -->
+            <!-- Component -->
+            <!-- ///////// -->
+            <div class="ml-2 mr-2 px-3 py-1 bg-indigo-50 rounded-md cursor-pointer">
+                <div class="h-18 text-sm">
+                    <div class="flex justify-between">
+                        <div class="flex items-center">
+
+                            <!-- Avatar -->
+                            <img class="w-10 h-10 object-cover rounded-full" alt="User avatar" src="https://i.pravatar.cc/200?u=007">
+
+                            <!-- Name & Chat -->
+                            <div class="mx-3">
+                                <div class="custom-truncate-wrap">
+                                    <p class="custom-truncate">เจนนี่ เฮนเดอร์สัน</p>
+                                </div>
+                                <div class="custom-truncate-wrap">
+                                    <p class="text-gray-400 custom-truncate">
+                                        อยากได้แบบนี้อะคะ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Time & Notification -->
+                        <div class="text-right">
+                            <span class="block w-16 text-gray-400 text-xs">12.45 น.</span>
+                            <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                        </div>
+                    </div>
+
+                    <!-- Tags Wrapper -->
+                    <!-- <div class="mt-1.5 overflow-hidden leading-none">
+                        <div class="min-w-max">
+                            <span class="inline-block px-2 py-1 border border-blue-200 text-blue-600 bg-blue-50 rounded text-xs text-center leading-none tag-truncate truncate">#รอชำระเงิน</span>
+                            <span class="inline-block px-2 py-1 border border-red-200 text-red-600 bg-red-50 rounded text-xs text-center leading-none tag-truncate truncate">#มีปัญหา</span>
+                            <span class="inline-block px-2 py-1 border border-green-200 text-green-600 bg-green-50 rounded text-xs text-center leading-none tag-truncate truncate">#จบการขาย</span>
+                            <span title="#สนใจ, #รอส่งสินค้า" class="inline-block px-2 py-1 border border-gray-200 text-gray-600 bg-gray-50 rounded text-xs text-center leading-none tag-truncate truncate">+1</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- ///////// -->
+            <!-- Component -->
+            <!-- ///////// -->
+            <div class="bg-white ml-2 mr-2 px-3 py-1 rounded-md cursor-pointer hover:bg-indigo-50">
+                <div class="h-18 text-sm">
+                    <div class="flex justify-between">
+                        <div class="flex items-center">
+                            <!-- Avatar -->
+                            <img class="w-10 h-10 object-cover rounded-full" alt="User avatar" src="https://i.pravatar.cc/200?u=013">
+                            
+                            <!-- Name & Chat -->
+                            <div class="mx-3">
+                                <div class="custom-truncate-wrap">
+                                    <p class="custom-truncate">เบน ชราภาพ</p>
+                                </div>
+                                <div class="custom-truncate-wrap">
+                                    <p class="text-gray-400 custom-truncate">
+                                        ดีทุกอย่างเลยครับ ยกเว้นการบริการ ห่วยแตกมากกก</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Time & Notification -->
+                        <div class="text-right">
+                            <span class="block w-16 text-gray-400 text-xs">10.15 น.</span>
+                            <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ///////// -->
+            <!-- Component -->
+            <!-- ///////// -->
+            <div class="bg-white ml-2 mr-2 px-3 py-1 rounded-md cursor-pointer hover:bg-indigo-50">
+                <div class="h-18 text-sm">
+                    <div class="flex justify-between">
+                        <div class="flex items-center">
+                            <!-- Avatar -->
+                            <img class="w-10 h-10 object-cover rounded-full" alt="User avatar" src="https://i.pravatar.cc/200?u=013">
+                            
+                            <!-- Name & Chat -->
+                            <div class="mx-3">
+                                <div class="custom-truncate-wrap">
+                                    <p class="custom-truncate">เบน ชราภาพ</p>
+                                </div>
+                                <div class="custom-truncate-wrap">
+                                    <p class="text-gray-400 custom-truncate">
+                                        ดีทุกอย่างเลยครับ ยกเว้นการบริการ ห่วยแตกมากกก</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Time & Notification -->
+                        <div class="text-right">
+                            <span class="block w-16 text-gray-400 text-xs">10.15 น.</span>
+                            <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .custom-truncate-wrap {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .custom-truncate {
+            display: table-cell;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    </style>
+
+</body>
+
+</html>
