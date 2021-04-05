@@ -192,7 +192,7 @@
             <!-- *** Channel Section ***-->
             <!-- ********************** -->
             <div id="channel-section"
-                class="z-60 h-content bg-zort-brand w-screen absolute lg:w-16 lg:static">
+                class="z-70 h-content bg-zort-brand w-screen absolute lg:w-16 lg:static">
 
                 <h2 class="text-sm text-white px-4 py-2 font-kanit lg:hidden">ช่องทางการขาย</h2>
 
@@ -215,7 +215,7 @@
                                 <span class="ml-3 text-white font-kanit lg:hidden">Messager</span>
                             </div>
                         </div>
-                        <ul class="dropdown-content lg:w-60 lg:absolute top-0 -right-60 lg:hidden text-gray-700 lg:bg-gray-100 rounded-tr-md rounded-br-md lg:shadow-md z-20">
+                        <ul class="dropdown-content lg:w-60 lg:absolute top-0 -right-60 lg:hidden text-gray-700 lg:bg-gray-100 rounded-tr-md rounded-br-md lg:shadow-md z-70">
                             <li>
                                 <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
                                     <span class="flex items-center">
@@ -517,6 +517,11 @@
                                             <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
                                         </div>
                                     </div>
+                                    <div class='mt-1.5 overflow-hidden'>
+                                        <div class='min-w-max'>
+                                            <span class="text-gray-500 text-xs bg-gray-100 py-0.5 px-2 rounded-lg">ดึงข้อมูลไม่ได้</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -539,6 +544,11 @@
                                         <div class="text-right">
                                             <span class="block w-16 text-gray-400 text-xs">12.45 น.</span>
                                             <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                                        </div>
+                                    </div>
+                                    <div class='mt-1.5 overflow-hidden'>
+                                        <div class='min-w-max'>
+                                            <span class="text-gray-500 text-xs bg-gray-100 py-0.5 px-2 rounded-lg">ดึงข้อมูลไม่ได้</span>
                                         </div>
                                     </div>
                                 </div>
@@ -638,6 +648,11 @@
 
                             <div class="ml-2 mr-2 mb-2 px-3 py-2 rounded-md text-gray-700 text-center bg-gray-100">
                                 <span class="block text-gray-400 text-xs">กำลังโหลดข้อมูล...</span>
+                            </div>
+                            <div class="ml-2 mr-2 mb-2 px-3 py-2 rounded-md text-gray-700 text-center bg-gray-100">
+                                <span class="block text-gray-400 text-xs"><svg class="inline w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg> อุ๊บ... ลองรีเฟรชใหม่อีกครั้ง</span>
                             </div>
                             <div class="ml-2 mr-2 mb-2 px-3 py-2 rounded-md text-gray-700 text-center bg-gray-100">
                                 <span class="block text-gray-400 text-xs">
@@ -1060,6 +1075,16 @@
                                 </div>
                             </div>
 
+                            <!-- System alert -->
+                            <div class="col-span-12 p-3">
+                                <div class="text-center">
+                                    <span class="font-kanit "><svg class="inline w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                      </svg> อุ๊บ... </span>
+                                    <div class="mt-1 font-kanit">ลองรีเฟรชใหม่อีกครั้ง</div>
+                                </div>
+                            </div>
+
                             <!-- Someone conversation bubble-->
                             <div class="col-start-1 col-end-12 lg:col-end-10 px-3">
                                 <div class="flex flex-row">
@@ -1082,10 +1107,28 @@
                                         <img class="w-7 h-7 object-cover rounded-full border-2 border-white"
                                             alt="User avatar" src="https://i.pravatar.cc/200?u=007">
                                     </div>
-                                    <div class="xl:-ml-2 text-sm z-0">
+                                    <div class="relative xl:-ml-2 text-sm z-0">
                                         <div class="bg-gray-100 py-2 px-4 shadow rounded-xl">อยากซื้อมือถือ iphone ค่ะ
                                         </div>
+
+                                        <div class="absolute top-0 -right-10">
+                                            <div class="relative">
+                                                <button class="p-2 rounded-full text-gray-400 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" data-popup="popup-toggle">
+                                                    <span class="sr-only">เพิ่มเติม</span>
+                                                    <svg class="pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                                                        <path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-60 hidden" data-popup="popup-panel">
+                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
+                                                        เพิ่มเป็นที่อยู่การจัดส่ง</a>
+                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
+                                                        เพิ่มเป็นหลักฐานของโอนเงิน</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="text-xs mt-2 text-gray-400 xl:ml-5">
                                     10/02/64 10.03น.
@@ -1208,7 +1251,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="h-28 border-t border-gray-300">
+                <div class="relative h-28 border-t border-gray-300">
                     <div class="flex flex-row items-center p-2 lg:p-3 py-4">
                         <div class="flex flex-row items-center w-full border rounded-xl p-2 bg-gray-100">
                             <div class="w-full">
@@ -1244,6 +1287,17 @@
                                         d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                                 </svg>
                             </button>
+                        </div>
+                    </div>
+                    <div class="absolute -top-14 w-full text-center z-20">
+                        <div class="inline-block bg-red-100 text-red-400 rounded-lg shadow-md px-4 py-2 font-kanit">
+                            <svg class="w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                            <strong class="leading-none">อัพโหลดรูปภาพไม่สำเสร็จ</strong> <span class="text-sm leading-none">ลองตรวจสอบขนาดไฟล์ไม่ให้เกิน 25MB</span>
+                            <svg class="w-4 inline ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                              </svg>
                         </div>
                     </div>
                 </div>
@@ -2063,6 +2117,19 @@
         </div>
     </div>
     <div id="overlay" class="w-screen h-screen bg-transparent fixed inset-0 z-50 hidden"></div>
+    <div id="loading" class="w-screen h-screen bg-white fixed inset-0 z-100 hidden">
+        <div class="flex justify-around items-center h-full">
+            <span class="inline-flex">
+              <div class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-black active:bg-rose-700 transition ease-in-out duration-150">
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span class="font-kanit">โปรดรอสักครู่</span>
+            </div>
+            </span>
+          </div>
+    </div>
 
     <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
 		style="background: rgba(0,0,0,.7);">
