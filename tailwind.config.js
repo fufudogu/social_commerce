@@ -22,7 +22,10 @@ module.exports = {
       'lg': {'min': '960px'},
       'xl': {'min': '1280px'},
       '2xl': {'min': '1920px'},
-    }
+    },
+    minWidth: {
+      '150': '150px',
+     }
   },
   variants: {
     extend: {},
