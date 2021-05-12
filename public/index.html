@@ -1437,7 +1437,7 @@
                 <!-- ///////////////////////// -->
                 <!-- Order Create -->
                 <!-- ///////////////////////// -->
-                <div id="managment-order" class="">
+                <div id="managment-order" class="hidden">
                     <div class="">
                         <div class="flex justify-between items-end pt-2 px-3">
                             <div class="">
@@ -1527,7 +1527,7 @@
 
                         <div class="md:flex justify-between items-center mt-3 mb-1 px-3">
                             <p class="text-gray-500 text-sm mb-1 md:mb-0">
-                                วันที่<span class="inline md:inline lg:hidden xl:inline">สร้างรายการ :</span> ธ.ค 63</p>
+                                วันที่<span class="inline md:inline lg:hidden xl:inline">สร้างรายการ :</span> 17 ธ.ค 63</p>
                             <div class='overflow-hidden'>
                                 <div class='min-w-max'>
                                     <span
@@ -2278,6 +2278,160 @@
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div id="list-order" class="p-2">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="font-kanit mb-3 mt-2">รายการขายทั้งหมด</h2>
+                        <div class="">
+                            <a href="#" class="px-3 py-1 border border-transparent text-sm font-kanit font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                <svg class="inline-block w-4" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg> สร้างรายการขาย
+                        </a>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Filter -->
+                    <div class="flex flex-col xl:flex-row mb-4">
+                        <div class="w-full xl:w-1/3 lg:mr-1 mb-1 xl:mb-0">
+                             <div class="block text-gray-500 text-xs">เลขที่รายการ</div>
+                            <input type="text" placeholder="IV-20210xxx" class="w-full px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                        </div>
+                        <div class="w-full xl:w-2/6 lg:mr-1 mb-1 xl:mb-0">
+                            <div class="block text-gray-500 text-xs">สินค้า</div>
+                            <div class="relative w-full inline-flex mb-1 xl:mb-0">
+                                <svg class="w-2 h-2 absolute top-0 right-0 m-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                                    <path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"></path>
+                                </svg>
+                                <select class="w-full border border-gray-300 rounded-md text-gray-600 h-9 pl-3 pr-7 bg-white hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    <option>ทั้งหมด</option>
+                                    <option>รอโอน</option>
+                                    <option>โอนบางส่วน</option>
+                                    <option>สำเร็จ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full xl:w-2/6 lg:mr-1 mb-1 xl:mb-0">
+                            <div class="block text-gray-500 text-xs">ชำระเงิน</div>
+                            <div class="relative w-full inline-flex mb-1 xl:mb-0">
+                                <svg class="w-2 h-2 absolute top-0 right-0 m-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                                    <path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"></path>
+                                </svg>
+                                <select class="w-full border border-gray-300 rounded-md text-gray-600 h-9 pl-3 pr-7 bg-white hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    <option>ทั้งหมด</option>
+                                    <option>รอชำระเงิน</option>
+                                    <option>ชำระเงินบางส่วน</option>
+                                    <option>สำเร็จ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full xl:w-1/6 lg:mr-1 mb-1 xl:mb-0">
+                            <div class="block text-gray-500 text-xs">&nbsp;</div>
+                            <button class="h-9 px-4 py-1 border border-gray-300 text-xs font-kanit font-medium rounded-full text-white text-center bg-gray-100 text-gray-500 hover:bg-gray-200">
+                                ค้นหา
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <div class="px-3 py-2 border border-gray-200 rounded-lg bg-white cursor-pointer hover:bg-indigo-50">
+                            <div class="flex justify-between items-center text-xs text-gray-500">
+                                <div class="">
+                                    <svg class="inline-block w-3 align-text-top" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg> 10 พ.ค. 2564
+                                      <svg class="inline-block w-3 align-text-top ml-3" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg> IV-202105010
+                                </div>
+                                <div class="">
+                                    <span class="inline-block px-3 py-1.5 bg-yellow-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">รอโอน</span>
+                                    <span class="inline-block px-3 py-1.5 bg-green-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">ชำระครบ</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-500">
+                                <div class="text-xs">
+                                    ช่องทาง: -
+                                </div>
+                                <div class="font-kanit text-lg font-medium text-gray-700">
+                                    ฿113.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 py-2 border border-gray-200 rounded-lg bg-white cursor-pointer hover:bg-indigo-50">
+                            <div class="flex justify-between items-center text-xs text-gray-500">
+                                <div class="">
+                                    <svg class="inline-block w-3 align-text-top" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg> 10 พ.ค. 2564
+                                      <svg class="inline-block w-3 align-text-top ml-3" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg> IV-202105010
+                                </div>
+                                <div class="">
+                                    <span class="inline-block px-3 py-1.5 bg-yellow-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">รอโอน</span>
+                                    <span class="inline-block px-3 py-1.5 bg-green-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">ชำระครบ</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-500">
+                                <div class="text-xs">
+                                    ช่องทาง: zort
+                                </div>
+                                <div class="font-kanit text-lg font-medium text-gray-700">
+                                    ฿113.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 py-2 border border-gray-200 rounded-lg bg-white cursor-pointer hover:bg-indigo-50">
+                            <div class="flex justify-between items-center text-xs text-gray-500">
+                                <div class="">
+                                    <svg class="inline-block w-3 align-text-top" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg> 10 พ.ค. 2564
+                                      <svg class="inline-block w-3 align-text-top ml-3" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg> IV-202105010
+                                </div>
+                                <div class="">
+                                    <span class="inline-block px-3 py-1.5 bg-yellow-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">รอโอน</span>
+                                    <span class="inline-block px-3 py-1.5 bg-green-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">ชำระครบ</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-500">
+                                <div class="text-xs">
+                                    ช่องทาง: zort
+                                </div>
+                                <div class="font-kanit text-lg font-medium text-gray-700">
+                                    ฿113.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 py-2 border border-gray-200 rounded-lg bg-white cursor-pointer hover:bg-indigo-50">
+                            <div class="flex justify-between items-center text-xs text-gray-500">
+                                <div class="">
+                                    <svg class="inline-block w-3 align-text-top" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg> 10 พ.ค. 2564
+                                      <svg class="inline-block w-3 align-text-top ml-3" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg> IV-202105010
+                                </div>
+                                <div class="">
+                                    <span class="inline-block px-3 py-1.5 bg-yellow-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">รอโอน</span>
+                                    <span class="inline-block px-3 py-1.5 bg-green-500 rounded-full text-white text-sm font-kanit text-center leading-none tag-truncate truncate">ชำระครบ</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-gray-500">
+                                <div class="text-xs">
+                                    ช่องทาง: zort
+                                </div>
+                                <div class="font-kanit text-lg font-medium text-gray-700">
+                                    ฿113.00
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
