@@ -14,6 +14,9 @@ module.exports = {
        '80': 80,
        '90': 90,
        '100': 100,
+      },
+      fontSize: {
+        'xxs': '.65rem',
       }
     },
     minWidth: {
@@ -21,7 +24,9 @@ module.exports = {
      }
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['group-hover']
+    },
   },
   plugins: [],
 }
