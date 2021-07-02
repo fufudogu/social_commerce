@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fufudogu/social_commerce#readme",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^10.2.5",
     "tailwindcss": "^2.0.3"
   }

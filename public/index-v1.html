@@ -357,7 +357,7 @@
                         </div>
 
                         <!-- Search -->
-                        <div class="px-2 py-2">
+                        <div class="px-2 py-3">
                             <div class="relative text-gray-600">
                                 <input type="search" name="serch" placeholder="ค้นหาชื่อลูกค้า"
                                     class="bg-white w-full h-8 px-4 pr-10 rounded-full border text-sm focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
@@ -375,131 +375,29 @@
                         </div>
 
                         <!-- Show Filter -->
-                        <div class="flex items-center justify-between px-2 pb-1">
-                            <div class="flex-1">
-                                <span class="hidden ml-2 text-xs text-gray-500">แสดง</span>
-                                <div class="relative">
-                                    <button class="w-full py-1.5 px-2 text-sm text-center rounded hover:bg-gray-100 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" data-popup="popup-toggle">
-                                        <span class="text-gray-600 leading-6 truncate pointer-events-none">แชททั้งหมด</span>
-                                        <svg class="inline w-4 h-4 transition-transform pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="z-70 origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50 hidden" data-popup="popup-panel">
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">แชททั้งหมด</span>
-                                        </a>
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">แชทของฉัน</span>
-                                        </a>
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">ไม่มีเจ้าของ</span>
-                                        </a>
-                                    </div>
+                        <div class="flex items-center justify-between px-2 pb-3">
+                            <div>
+                                <span class="ml-2 text-xs text-gray-500">แสดง</span>
+                            </div>
+                            <div>
+                                <div class="relative w-full inline-flex mb-1 xl:mb-0">
+                                    <svg class="w-2 h-2 absolute top-0 right-0 m-3 pointer-events-none"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                                        <path
+                                            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                                            fill="#648299" fill-rule="nonzero"></path>
+                                    </svg>
+                                    <select
+                                        class="w-full border border-gray-300 rounded-md text-gray-600 h-7 pl-3 pr-7 text-xs bg-white hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        <option>ทั้งหมด(17)</option>
+                                        <option>สนใจ</option>
+                                        <option>รอส่งสินค้า</option>
+                                        <option>รอชำระเงิน</option>
+                                        <option>จบการขาย</option>
+                                        <option>มีปัญหา</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="flex-1">
-                                <div class="relative">
-                                    <button class="w-full py-1.5 px-2 text-sm text-center rounded hover:bg-gray-100 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" data-popup="popup-toggle">
-                                        <span class="text-gray-600 leading-6 truncate pointer-events-none">ทั้งหมด</span>
-                                        <svg class="inline w-4 h-4 transition-transform pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="z-70 origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50 hidden" data-popup="popup-panel">
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">ทั้งหมด</span>
-                                        </a>
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">ยังไม่ได้อ่าน</span>
-                                        </a>
-                                        <a href="#" class="block flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" data-popup="popup-close">
-                                            <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">อ่านแล้ว</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-1">
-                                <div class="relative">
-                                    <button class="w-full py-1.5 px-2 text-sm text-center rounded hover:bg-gray-100 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" data-popup="popup-toggle">
-                                        <span class="text-gray-600 leading-6 truncate pointer-events-none">แท็ก</span>
-                                        <svg class="inline w-4 h-4 transition-transform pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="z-70 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50 hidden" data-popup="popup-panel">
-                                        <label for="no-payment" class="flex items-start px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                            <span class="flex items-center">
-                                                <input id="no-payment" name="no-payment" type="checkbox" class="mr-2 focus:ring-indigo-500 h-3 w-3 text-indigo-600 border rounded">
-                                                <span class="text-gray-600">ยังไม่ได้จ่ายเงิน</span>
-                                            </span>
-                                        </label>
-                                        <label for="no-ship" class="flex items-start px-3 py-2 text-sm text-gray-700 border-b border-bottom-gray-400 hover:bg-gray-100 cursor-pointer">
-                                            <span class="flex items-center">
-                                                <input id="no-ship" name="no-ship" type="checkbox" class="mr-2 focus:ring-indigo-500 h-3 w-3 text-indigo-600 border rounded">
-                                                <span class="text-gray-600">เตรียมส่ง</span>
-                                            </span>
-                                        </label>
-                                        <label for="tag-1" class="flex items-start px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                            <span class="flex items-center">
-                                                <input id="tag-1" name="tag-1" type="checkbox" class="mr-2 focus:ring-indigo-500 h-3 w-3 text-indigo-600 border rounded">
-                                                <span class="text-gray-600">สนใจสินค้า</span>
-                                            </span>
-                                        </label>
-                                        <label for="tag-2" class="flex items-start px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                            <span class="flex items-center">
-                                                <input id="tag-2" name="tag-2" type="checkbox" class="mr-2 focus:ring-indigo-500 h-3 w-3 text-indigo-600 border rounded">
-                                                <span class="text-gray-600">แบล็คลิส</span>
-                                            </span>
-                                        </label>
-                                        <label for="tag-3" class="flex items-start px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                            <span class="flex items-center">
-                                                <input id="tag-3" name="tag-3" type="checkbox" class="mr-2 focus:ring-indigo-500 h-3 w-3 text-indigo-600 border rounded">
-                                                <span class="text-gray-600">แจ้งปัญหา</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tag Section -->
-                        <div class="flex flex-wrap border-t border-b border-gray-200 p-1 px-2 mb-2 gap-1">
-                            <span class="inline-flex text-red-600 bg-gray-100 rounded-sm text-xs text-center leading-none">
-                                <span class="font-kanit px-2 py-1 pr-0.5">#แจ้งปัญหา</span>
-                                <a href="#" class="leading-5 px-0.5 rounded-sm hover:bg-gray-200">
-                                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg></a>
-                            </span>
-                            <span class="inline-flex text-red-600 bg-gray-100 rounded-sm text-xs text-center leading-none">
-                                <span class="font-kanit px-2 py-1 pr-0.5">#ยังไม่ได้จ่านเงิน</span>
-                                <a href="#" class="leading-5 px-0.5 rounded-sm hover:bg-gray-200">
-                                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg></a>
-                            </span>
-                            <span class="inline-flex text-red-600 bg-gray-100 rounded-sm text-xs text-center leading-none">
-                                <span class="font-kanit px-2 py-1 pr-0.5">#เตรียมส่ง</span>
-                                <a href="#" class="leading-5 px-0.5 rounded-sm hover:bg-gray-200">
-                                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg></a>
-                            </span>
-                            <span class="inline-flex text-red-600 bg-gray-100 rounded-sm text-xs text-center leading-none">
-                                <span class="font-kanit px-2 py-1 pr-0.5">#สนใจสินค้า</span>
-                                <a href="#" class="leading-5 px-0.5 rounded-sm hover:bg-gray-200">
-                                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg></a>
-                            </span>
-                            <span class="inline-flex text-red-600 bg-gray-100 rounded-sm text-xs text-center leading-none">
-                                <span class="font-kanit px-2 py-1 pr-0.5">#แบล็คลิส</span>
-                                <a href="#" class="leading-5 px-0.5 rounded-sm hover:bg-gray-200">
-                                    <svg class="w-3 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg></a>
-                            </span>
                         </div>
 
                         <!-- Chat Account -->
