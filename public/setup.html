@@ -1,0 +1,1720 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="outer-section" class="h-screen flex flex-col">
+        
+        <!-- ********************* -->
+        <!-- *** Topbar Section ***-->
+        <!-- ********************* -->
+        <nav id="topbar-section" class="bg-white border-b border-gray-300">
+            <div class="mx-auto px-2 px-4">
+                <div class="relative flex items-center justify-between h-16">
+
+                    <!-- ### Mobile ### -->
+                    <!-- Go To ZORT -->
+                    <!-- State Channel -->
+                    <div id="back-to-zort" class="hidden flex items-center lg:hidden">
+                        <a href="#"
+                            class="inline-flex items-center justify-center py-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg> กลับไปที่ ZORT
+                        </a>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- Back Button -->
+                    <!-- State User, Chat -->
+                    <div id="back-button" class="flex items-center lg:hidden">
+                        <a href="#"
+                            class="inline-flex items-center justify-center py-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                              </svg> กลับ
+                        </a>
+                    </div>
+
+                    <!-- Logo -->
+                    <div id="logo" class="hidden lg:block">
+                        <a href="#">
+                            <img class="h-7 mx-2 w-auto" src="img/zort-social-logo-fit.png" alt="ZORT Social Commerce">
+                        </a>
+                    </div>
+
+                    <!-- ### Desktop & Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Channel, User -->
+                    <!-- ///////////////////////// -->
+                    <div id="user-state" class="flex items-center">
+                        <button
+                            class="hidden lg:block px-3 py-1 rounded-full text-gray-500 align-top hover:text-gray-700 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                            <svg class="inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="text-sm">ตั้งค่า</span>
+                        </button>
+
+                        <button
+                            class="hidden lg:block px-3 py-1 rounded-full text-gray-500 align-top hover:text-gray-700 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                            <svg class="inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                            <span class="text-sm">การแจ้งเตือน</span>
+                            <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                        </button>
+
+                        <!-- Profile dropdown -->
+                        <div class="ml-3 relative">
+                            <button
+                                class="bg-gray-100 p-2 flex items-center text-sm text-left rounded-full focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"
+                                data-popup="popup-toggle">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-6 w-6 mr-2 rounded-full pointer-events-none"
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="">
+                                <span class="w-24 mr-2 text-gray-600 text-sm truncate pointer-events-none">อดิศักดิ์</span>
+                                <svg class="w-4 h-4 transition-transform pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="z-70 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50 hidden"
+                                data-popup="popup-panel">
+                                <a href="#"
+                                    class="block flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="h-6 w-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">สมชาย</span>
+                                </a>
+                                <a href="#"
+                                    class="block flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="h-6 w-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">ฉัตรชัย</span>
+                                </a>
+                                <a href="#"
+                                    class="block flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="h-6 w-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-gray-600 text-sm truncate pointer-events-none">กนกวรรณ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Chat -->
+                    <!-- ///////////////////////// -->
+                    <div id="chat-name-state"
+                        class="hidden flex-1 flex items-center justify-center lg:items-stretch lg:justify-start -mr-16 lg:hidden">
+                        <div class="flex-shrink-0 flex items-center">
+                            <div class="flex items-center text-sm rounded-full">
+                                <img class="h-6 w-6 mr-2 rounded-full"
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                    alt="">
+                                <span class="w-16 md:w-24 mr-2 text-gray-600 text-sm truncate">อดิศักดิ์</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chat-createorder-state" class="hidden lg:hidden">
+                        <a href="#" class="text-sm text-blue-600">สร้างรายการ</a>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Order -->
+                    <!-- ///////////////////////// -->
+                    <div id="order-state" class="hidden flex-1 flex items-center justify-end lg:hidden">
+                        <div class="inline-flex items-center">
+                            <label class="text-gray-500 text-xs mr-2 hidden md:block">รายการขาย</label>
+                            <div class="relative inline-flex">
+                                <svg class="w-2 h-2 absolute top-0 right-0 m-3 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                                    <path
+                                        d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                                        fill="#648299" fill-rule="nonzero"></path>
+                                </svg>
+                                <select
+                                    class="border border-gray-300 rounded-md text-gray-600 h-8 pl-3 pr-7 bg-white hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    <option>IV-202102004</option>
+                                    <option>IV-202102005</option>
+                                    <option>SO-202101027</option>
+                                    <option>362411556118020</option>
+                                    <option>IV-202102001</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav> <!--*** End Topbar Section ***-->
+
+        <!-- Wrapper Secion -->
+        <div id="wrapper-section" class="flex-1 flex overflow-x-hidden">
+
+            <!-- ********************** -->
+            <!-- *** Channel Section ***-->
+            <!-- ********************** -->
+            <div id="channel-section"
+                class="z-70 h-content bg-zort-brand w-screen absolute lg:w-16 lg:static">
+
+                <h2 class="text-sm text-white px-4 py-2 font-kanit lg:hidden">ช่องทางการขาย</h2>
+
+                <!-- ///////////////////////// -->
+                <!-- Agent App -->
+                <!-- ///////////////////////// -->
+                <div class="border-b lg:border-none border-gray-500">
+                    <div class="dropdown relative">
+                        <div class="lg:flex items-center justify-center py-2 px-4 lg:px-0" title="Messenger">
+                            <div class="inline-flex items-center cursor-pointer">
+                                <!-- Brand Icon -->
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-white">
+                                    <svg width="24" height="24" class="fb-msg-brand" xmlns="http://www.w3.org/2000/svg"
+                                        fill-rule="evenodd" clip-rule="evenodd">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm0 5.5c-3.866 0-7 2.902-7 6.481 0 2.04 1.018 3.86 2.609 5.048v2.471l2.383-1.308c.636.176 1.31.271 2.008.271 3.866 0 7-2.902 7-6.482 0-3.579-3.134-6.481-7-6.481zm.696 8.728l-1.783-1.901-3.478 1.901 3.826-4.061 1.826 1.901 3.435-1.901-3.826 4.061z" />
+                                    </svg>
+                                </div>
+                                <!-- Brand Name -->
+                                <span class="ml-3 text-white font-kanit lg:hidden">Messager</span>
+                            </div>
+                        </div>
+                        <ul class="dropdown-content lg:w-60 lg:absolute top-0 -right-60 lg:hidden text-gray-700 lg:bg-gray-100 rounded-tr-md rounded-br-md lg:shadow-md z-70">
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
+                                    <span class="flex items-center">
+                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=0D8ABC&amp;color=fff">
+                                        <span class="mx-3 custom-truncate-wrap">
+                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
+                                                โฟโต้ คอนเนอร์
+                                            </p>
+                                        </span>
+                                    </span>
+                                    <span class="text-right">
+                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
+                                    <span class="flex items-center">
+                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=ccff33&amp;color=000">
+                                        <span class="mx-3 custom-truncate-wrap">
+                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
+                                                ผักสดโอมายก็อด 
+                                            </p>
+                                        </span>
+                                    </span>
+                                    <span class="text-right">
+                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
+                                    <span class="flex items-center">
+                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=33eeff&amp;color=000">
+                                        <span class="mx-3 custom-truncate-wrap">
+                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
+                                                Hee Sun Kwang Shop 
+                                            </p>
+                                        </span>
+                                    </span>
+                                    <span class="text-right">
+                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ///////////////////////// -->
+                <!-- Setting -->
+                <!-- ///////////////////////// -->
+                <div class="absolute inset-x-0 bottom-0 p-3 bg-white lg:hidden">
+                    <button
+                        class="w-full lg:hidden px-3 py-1 rounded-full text-left text-gray-500 align-top hover:text-gray-700 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                        <svg class="inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="text-sm">ตั้งค่า</span>
+                    </button>
+                </div>
+            </div>  <!--*** End Channel Section ***-->
+
+            <!-- ********************* -->
+            <!-- *** Full Width Template Section ***-->
+            <!-- ********************* -->
+            <div id="w-full-setion" class="h-content bg-white overflow-y-auto w-screen absolute border-l lg:static transition">
+                <div class="m-4 lg:mx-24 lg:my-12">
+                    <h1 class="mb-4 font-kanit text-2xl">ตั้งค่าการทำงาน</h1>
+
+                    <div class="border rounded-md">
+                        <!-- Tabs -->
+                        <ul id="tabs" class="flex border-b">
+                            <li class="relative overflow-hidden flex-1 p-4 font-kanit text-gray-800 text-center border-b-2 border-blue-400 rounded-t">
+                                1. ช่องทางการจ่ายเงินและการจัดส่ง
+                                
+                            </li>
+                            <li class="relative overflow-hidden flex-1 p-4 font-kanit text-gray-800 text-center rounded-t">2. ตั้งค่าการขายสินค้า
+                                <div class="absolute top-0 -left-9 w-14 h-14 border transform rotate-45"></div>
+                            </li>
+                            <li class="relative overflow-hidden flex-1 p-4 font-kanit text-gray-800 text-center rounded-t">3. สร้างไลฟ์ขายของ
+                                <div class="absolute top-0 -left-9 w-14 h-14 border transform rotate-45"></div>
+                            </li>
+                        </ul>
+    
+                        <!-- Tab Contents -->
+                        <div id="tab-contents">
+                            <div class="hidden p-4 lg:p-8">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="">
+                                        <div class="text-center my-4">
+                                            <img src="" alt="ใส่รูปกราฟฟิก" class="mb-4"/>
+                                            <h2 class="font-kanit text-lg">ช่องทางการชำระเงิน</h2>
+                                            <p class="font-kanit text-gray-400">xxx</p>
+                                            <a href="#" class="inline-block mt-4 px-6 py-1 border border-gray-300 font-kanit rounded-full bg-white hover:bg-gray-200">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                                  </svg> ตั้งค่า
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="text-center my-4">
+                                            <img src="" alt="ใส่รูปกราฟฟิก" class="mb-4"/>
+                                            <h2 class="font-kanit text-lg">การจัดส่ง</h2>
+                                            <p class="font-kanit text-gray-400">xxx</p>
+                                            <a href="#" class="inline-block mt-4 px-6 py-1 border border-gray-300 font-kanit rounded-full bg-white hover:bg-gray-200">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                                  </svg> ตั้งค่า
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 text-right">
+                                    <a href="#" class="inline-block px-6 py-2 border border-transparent font-kanit font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                        ต่อไป <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                          </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hidden p-4 lg:p-8">
+                                <div class="mb-8 bg-teal-lightest border-t-4 border-teal rounded-b text-teal-darkest px-4 py-3 shadow-md my-2" role="alert">
+                                    <div class="flex">
+                                      <svg class="h-6 w-6 text-teal mr-4 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg>
+                                      <div>
+                                        <p class="mb-1 font-kanit text-lg">การ CF ของระบบ</p>
+                                        <p class="text-sm font-kanit text-gray-400">CF ชิ้นเดียว เช่น “CF A01” เท่ากับ สั่งซื้อสินค้า A01 จำนวน 1 ชิ้น</p>
+                                        <p class="text-sm font-kanit text-gray-400">CF หลายชิ้น เช่น “CF B01=3” เท่ากับ สั่งซื้อสินค้า B01 จำนวน 3 ชิ้น</p>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="font-kanit text-lg mb-4">ตั้งค่ารูปแบบการ CF</h2>
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">บันทึกออเดอร์เมื่อมีคียเวิร์ดใดๆ อยู่ในข้อความ</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">บันทึกออเดอร์เมื่อข้อความเป็นคียเวิร์ดเท่านั้น</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inline-block mt-4 bg-gray-50 py-2 px-4 rounded-lg mr-2">
+                                    <div class="flex flex-col md:flex-row gap-6">
+                                        <div class="flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                            </div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="comments" class="font-medium text-gray-700">ป้องกันการ CF ซ้ำซ้อน</label>
+                                                <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-8"/>
+
+                                <h2 class="font-kanit text-lg mb-4">ตั้งค่าการ CF</h2>
+
+                                <div class="">
+                                    <label for="first-name" class="block mb-2 text-sm">กำหนดจำนวนชิ้นที่ลูกค้าสามารถ CF ได้ต่อสินค้า</label>
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"> / ชิ้น
+                                    <p class="mt-1 text-gray-400 text-sm">Get notified when someones posts a comment on a posting.</p>
+                                </div>
+
+                                <div class="mt-4">
+                                    <label for="first-name" class="block mb-2 text-sm">กำหนดจำนวนชิ้นทั้งหมดที่ลูกค้าสามารถ CF ได้ต่อการไลฟ์ขายของ 1 ครั้ง</label>
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"> / ชิ้น
+                                    <p class="mt-1 text-gray-400 text-sm">Get notified when someones posts a comment on a posting.</p>
+                                </div>
+
+                                <div class="flex flex-col mt-4">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">สามารถ CF ได้หลายสินค้าใน 1 ข้อความ</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-8"/>
+
+                                <h2 class="font-kanit text-lg mb-4">ตั้งค่าการขาย</h2>
+
+                                <div class="">
+                                    <label for="first-name" class="block mb-2 text-sm">ลูกค้าจะต้องชำระเงินหลังจากที่ได้สั่งซื้อภายใน</label>
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"> / ชิ้น
+                                    <p class="mt-1 text-gray-400 text-sm">Get notified when someones posts a comment on a posting.</p>
+                                </div>
+
+                                <div class="flex flex-col mt-4">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">ข้อความทวงเงินอัตโนมัติ</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <label for="first-name" class="block mb-2 text-sm">แจ้งเตือนสินค้าใกล้หมด กำหนดจำนวนเมื่อใกล้หมด</label>
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"> / ชิ้น
+                                    <p class="mt-1 text-gray-400 text-sm">Get notified when someones posts a comment on a posting.</p>
+                                </div>
+
+                                <hr class="my-8"/>
+
+                                <h2 class="font-kanit text-lg mb-4">ตั้งค่าการสรุปคำสั่งซื้อ</h2>
+
+                                <div class="mb-8 bg-teal-lightest border-t-4 border-teal rounded-b text-teal-darkest px-4 py-3 shadow-md my-2" role="alert">
+                                    <div class="flex">
+                                      <svg class="h-6 w-6 text-teal mr-4 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg>
+                                      <div>
+                                        <p class="mb-1 font-kanit text-lg">ระบบจะส่งข้อความรายการสินค้าที่ลูกค้าสั่งซื้อให้อัตโนมัติ</p>
+                                        <p class="text-sm font-kanit text-gray-400">Get notified when someones posts a comment on a posting.</p>
+                                        <p class="text-sm font-kanit text-gray-400">Get notified when someones posts a comment on a posting.</p>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col md:flex-row gap-6">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">ส่งลิ้งสรุปให้ทันที เมื่อ CF</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="comments" class="font-medium text-gray-700">สรุปลิ้งสรุปหลังจากจบไลฟ์</label>
+                                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="font-kanit text-lg mt-6 mb-1">กำนหดข้อความสรุปยอด</h2>
+                                <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                <textarea class="w-full mt-4 px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" placeholder="xxx" rows="3"></textarea>
+
+                                <div class="mt-6 text-right">
+                                    คุณสามารถตั้วค่าในภายหลังได้
+                                    <a href="#" class="inline-block px-6 py-2 border border-transparent font-kanit font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                        ต่อไป <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                          </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="p-4 lg:p-8">
+                                <div class="max-w-md mx-auto">
+                                    <h2 class="font-kanit text-lg">For example, this config will also generate hover and focus variants</h2>
+                                    <p class="font-kanit text-gray-400">Get notified when someones posts a comment on a posting. Get notified when someones posts a comment on a posting.</p>
+
+                                    <div class="mt-6 mb-3">
+                                        <label for="email-address" class="block text-sm text-gray-500">ชื่อ</label>
+                                        <input type="text" name="email-address" id="email-address" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email-address" class="block text-sm text-gray-500">เลือกเพจ</label>
+                                        <input type="text" name="email-address" id="email-address" class="px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email-address" class="block text-sm text-gray-500">คำอธิบาย</label>
+                                        <textarea class="w-full px-2 py-1 border border-gray-300 rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" placeholder="xxx" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="mt-6 text-right">
+                                        <a href="#" class="inline-block px-6 py-2 border border-transparent font-kanit font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                            สร้าง <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-6" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                              </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div> <!--*** Full Width Template Section ***-->
+
+
+        </div>
+    </div>
+    <div id="overlay" class="w-screen h-screen bg-transparent fixed inset-0 z-50 hidden"></div>
+    <div id="loading" class="w-screen h-screen bg-white fixed inset-0 z-100 hidden">
+        <div class="flex justify-around items-center h-full">
+            <span class="inline-flex">
+              <div class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium text-black active:bg-rose-700 transition ease-in-out duration-150">
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span class="font-kanit">โปรดรอสักครู่</span>
+            </div>
+            </span>
+          </div>
+    </div>
+
+    <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+		style="background: rgba(0,0,0,.7);">
+		<div
+			class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 mx-auto rounded shadow-lg z-50 overflow-y-auto max-w-4xl">
+			<div class="modal-content py-4 text-left px-6">
+				<!--Title-->
+				<div class="flex justify-between items-center">
+					<p class="text-xl font-bold">เลือกรายการสินค้า</p>
+					<div class="modal-close cursor-pointer z-50">
+						<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+							viewBox="0 0 18 18">
+							<path
+								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<!--Body-->
+				<div class="my-5">
+                    <div class="flex justify-between items-center my-4">
+                        <div class="relative text-gray-600">
+                            <input type="search" name="serch" placeholder="ค้นหาชื่อลูกค้า" class="bg-white w-full md:w-60 h-10 px-4 pr-10 rounded-full border text-sm focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                            <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                                    <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="#" class="px-6 py-1 border border-transparent text-base font-medium rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                            ตกลง
+                        </a>
+                    </div>
+
+                    <div class="container mx-auto">
+                        <div class="overflow-x-auto bg-white rounded-lg border overflow-y-auto relative"
+                            style="height: 405px;">
+                            <table class="border-collapse table-auto  w-max	 whitespace-no-wrap bg-white table-striped relative">
+                                <thead>
+                                    <tr class="text-left z-10">
+                                        <th class="w-1/12 py-2 px-3 sticky top-0 border-b border-gray-200 bg-gray-100 z-10">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </th>
+                                        <th class="w-5/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm z-10">รายการสินค้า</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10">พร้อมขาย</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10">ราคาต่อหน่วย</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10">จำนวน</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <!-- Input Custom Number -->
+                                            <div class="inline-block">
+                                                <div class="flex flex-row h-6 w-20 rounded-lg relative bg-transparent mt-2">
+                                                    <button data-action="decrement" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-l cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">−</span>
+                                                    </button>
+                                                    <input type="number" class="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0">
+                                                    <button data-action="increment" class="bg-gray-200 text-gray-600 hover:text-gray-700 hover:bg-gray-300 h-full w-20 rounded-r cursor-pointer">
+                                                        <span class="m-auto text-md font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex-1 flex items-center justify-between">
+                        <div>
+                          <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                              <!-- Heroicon name: solid/chevron-left -->
+                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                            <a href="#" class="relative md:inline-flex relative items-center px-4 py-2 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                            <span class="relative inline-flex items-center px-4 py-2 border bg-gray-100 text-sm font-medium text-gray-700">4</span>
+                            <a href="#" class="relative md:inline-flex relative items-center px-4 py-2 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">5</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                              <!-- Heroicon name: solid/chevron-right -->
+                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </nav>
+                        </div>
+                      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="main-modal-product fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+		style="background: rgba(0,0,0,.7);">
+		<div
+			class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 mx-auto rounded shadow-lg z-50 overflow-y-auto max-w-4xl">
+			<div class="modal-content py-4 text-left px-6">
+				<!--Title-->
+				<div class="flex justify-between items-center">
+					<p class="text-xl font-bold font-kanit">เลือกรายการสินค้า</p>
+					<div class="modal-close-product cursor-pointer z-50">
+						<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+							viewBox="0 0 18 18">
+							<path
+								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<!--Body-->
+				<div class="my-5">
+                    <div class="flex justify-between items-center my-4">
+                        <div class="relative text-gray-600">
+                            <input type="search" name="serch" placeholder="ค้นหาชื่อ, รหัสสินค้า" class="bg-white w-full md:w-60 h-10 px-4 pr-10 rounded-full border text-sm focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                            <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+                                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                                    <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- <a href="#" class="px-3 md:px-6 py-1 border border-transparent text-base font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                            เลือกสินค้า
+                        </a> -->
+                    </div>
+
+                    <div class="container mx-auto">
+                        <div class="overflow-x-auto bg-white rounded-lg border overflow-y-auto relative"
+                            style="height: 405px;">
+                            <table class="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+                                <thead>
+                                    <tr class="text-left z-10">
+                                        <th class="w-1/12 py-2 px-3 sticky top-0 border-b border-gray-200 bg-gray-100 z-10">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </th>
+                                        <th class="w-5/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm z-10">รายการสินค้า</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10">พร้อมขาย</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10">ราคาต่อหน่วย</th>
+                                        <th class="w-2/12 bg-gray-100 sticky top-0 border-b border-gray-200 py-2 px-3 text-gray-600 font-bold text-sm text-right z-10"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border-dashed border-t border-gray-200 px-3">
+                                            <label
+                                                class="text-teal-500 inline-flex justify-between items-center hover:bg-gray-200 rounded-lg cursor-pointer">
+                                                <input type="checkbox" class="form-checkbox rowCheckbox focus:outline-none focus:shadow-outline">
+                                            </label>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 userId">
+                                            <div class="flex flex-row">
+                                                <div class="mr-2">
+                                                    <div class="w-12 h-12">
+                                                        <img src="https://via.placeholder.com/150">
+                                                    </div>
+                                                </div>
+                                                <div class="mr-2">
+                                                    <p class="text-sm">กางเกงขาสั้น สีส้ม ผ้าเนื้อดี ไชต์ M ขายดีมากๆ ใกล้หมดแล้วนะรีบมาซื้อกันเถอะ</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            340,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            5,000
+                                        </td>
+                                        <td class="p-2 border-dashed border-t border-gray-200 text-right">
+                                            <a href="#" class="px-4 py-1 border border-transparent text-xs font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                                เลือก
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex-1 flex items-center justify-between">
+                        <div>
+                          <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                              <!-- Heroicon name: solid/chevron-left -->
+                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-1 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-1 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                            <a href="#" class="relative md:inline-flex relative items-center px-2 py-1 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                            <span class="relative inline-flex items-center px-2 py-1 border bg-gray-100 text-sm font-medium text-gray-700">4</span>
+                            <a href="#" class="relative md:inline-flex relative items-center px-2 py-1 border bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">5</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                              <!-- Heroicon name: solid/chevron-right -->
+                              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </nav>
+                        </div>
+                      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="main-modal-msg fixed w-full h-100 inset-0 z-50 overflow-y-scroll md:flex md:justify-center md:items-center animated fadeIn faster"
+		style="background: rgba(0,0,0,.7);">
+		<div
+			class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 mx-auto rounded shadow-lg z-50 overflow-y-auto max-w-4xl">
+			<div class="modal-content py-4 text-left px-6 bg-white">
+				<!--Title-->
+				<div class="flex justify-between items-center">
+					<p class="text-xl font-bold font-kanit">ข้อความที่ใช้บ่อย</p>
+					<div class="modal-close-msg cursor-pointer z-50">
+						<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+							viewBox="0 0 18 18">
+							<path
+								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<!--Body-->
+				<div class="my-5">
+                    <div class="container mx-auto">
+                        <p class="font-kanit mb-3 text-gray-500">คำไหนที่ใช่บ่อยหรือข้อความยาวๆ สร้างคำลัดส่วนตัวเพื่อทำงานได้รวดเร็วขึ้น </p>
+                        <div class="md:grid grid-cols-12 w-full border rounded-md">
+                            <div class="col-span-4 border-r">
+                                <div class="flex justify-between items-center p-3 border-b">
+                                    <p class="font-kanit text-sm">คำลัด</p>
+                                    <button class="px-1 py-0.5 border border-transparent text-xs font-medium font-kanit rounded-md text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                          </svg>
+                                        <span>เพิ่ม</span>
+                                    </button>
+                                </div>
+                                <ul class="divide-y h-72 overflow-y-auto">
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">คำลัดใหม่</li>
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Hi</li>
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">แนะนำ</li>
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">ขนส่ง</li>
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">จ่ายเงิน</li>
+                                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">ติดต่อ</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-8">
+                                <div class="p-3 border-t md:border-t-0">
+                                    <div class="mb-3">
+                                        <div class="block mb-1 text-gray-500 text-xs">คำลัด</div>
+                                       <input type="text" placeholder="พิมพ์คำลัด" value="" class="w-full lg:w-6/12 px-2 py-1 border border-gray-300 text-sm rounded hover:border-gray-400 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                       <span class="block mt-1 text-xs text-gray-400">ไม่เกิน 20 อักษรและต้องไม่มีเว้นววรค หรือมีอะไรอีกก็บอกในนี้</span>
+                                   </div>
+                                   <div class="mb-3">
+                                        <div class="block mb-1 text-gray-500 text-xs">ข้อความ</div>
+                                        <textarea class="border p-3 focus:outline-none text-sm rounded-md w-10/12 h-32 resize-none bg-gray-100" placeholder="พิมพ์ข้อความ...."></textarea>
+                                    </div>
+                                    <div class="">
+                                        <button class="px-4 py-1 border border-transparent text-sm font-medium font-kanit rounded-full text-white text-center bg-indigo-600 hover:bg-indigo-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                                              </svg> 
+                                            <span>บันทึก</span>
+                                        </button>
+                                        <button class="px-4 py-1 border border-transparent text-sm font-medium font-kanit rounded-full text-red-600 text-center bg-white hover:bg-red-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                              </svg> <span>ลบ</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Popup -->
+    <script>
+        function dropdown_popup(e) {
+            const elm = e.target.parentNode.parentElement.querySelector(
+                'button[data-popup="popup-toggle"]'
+            );
+            const target = elm.nextElementSibling;
+            target.classList.toggle('hidden');
+
+            if(target.id == "popup-tags") {
+                document.getElementById("popup-input-tags").focus();                
+            }
+
+            document.getElementById("overlay").classList.toggle('hidden');
+        }
+
+        const popupButtons = document.querySelectorAll(
+            `button[data-popup="popup-toggle"]`
+        );
+        popupButtons.forEach(elm => {
+            elm.addEventListener("click", dropdown_popup);
+        });
+    </script>
+
+    <!-- Custom input -->
+    <script>
+        function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+
+            if (Math.sign(value)) { value--; }
+            target.value = value;
+        }
+
+        function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value++;
+            target.value = value;
+        }
+
+        const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+        );
+        const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+        );
+        decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+        });
+        incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+        });
+    </script>
+
+    <!-- Tabs -->
+    <script>
+        function initTab(elem) {
+            document.addEventListener('click', function (e) {
+                if (!e.target.matches(elem + ' .t-btn')) return;
+                else {
+                    if (!e.target.classList.contains('active')) {
+                        findActiveElementAndRemoveIt(elem + ' .t-btn');
+                        findActiveElementAndRemoveIt(elem + ' .t-panel');
+                        e.target.classList.add('active', 'text-indigo-600', 'border-indigo-600');
+
+                        setTimeout(function () {
+                            var panel = document.querySelectorAll(elem + ' .t-panel.' + e.target.dataset
+                                .name);
+                            Array.prototype.forEach.call(panel, function (el) {
+                                el.classList.add('active');
+                            });
+                        }, 0);
+                    }
+                }
+            });
+        }
+
+        function findActiveElementAndRemoveIt(elem) {
+            var elementList = document.querySelectorAll(elem);
+
+            //console.log(elem, elementList);
+            Array.prototype.forEach.call(elementList, function (e) {
+                e.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+
+                //console.log(e);
+            });
+        }
+
+        initTab('.tabs');
+    </script>
+
+    <!-- Collapse -->
+    <script>
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+        const popuptriggers = Array.from(document.querySelectorAll('[data-popup="popup-toggle"]'));
+        const popupClosetriggers = Array.from(document.querySelectorAll('[data-popup="popup-close"]'));
+
+        window.addEventListener('click', (ev) => {
+            const elm = ev.target;
+
+            // Toggle Collapse
+            if (triggers.includes(elm)) {
+                const selector = elm.getAttribute('data-target');
+                collapse(selector, 'toggle');
+                
+                const child = elm.children[0];
+                child.classList.toggle('-rotate-90');
+            }
+
+            // Clear Overlay Popup
+            if(ev.target.id == "overlay") {
+                ev.target.classList.toggle('hidden');
+                clearDropdown();
+            }
+
+            // Clear Popup
+            if (popupClosetriggers.includes(elm)) {
+                document.getElementById("overlay").classList.toggle('hidden');
+                clearDropdown();
+            }
+
+        }, false);
+
+        const fnmap = {
+            'toggle': 'toggle',
+            'show': 'add',
+            'hide': 'remove'
+        };
+        const collapse = (selector, cmd) => {
+            const targets = Array.from(document.querySelectorAll(selector));
+            targets.forEach(target => {
+                //target.classList[fnmap[cmd]]('show');
+                target.classList[fnmap[cmd]]('hidden');
+            });
+        }
+
+        function clearDropdown() {
+            var popupToggle = document.querySelectorAll('[data-popup="popup-panel"]');
+            [].forEach.call(popupToggle, function(el) {
+                el.classList.add('hidden');
+            });
+        }
+    </script>
+
+    <!-- Modal -->
+    <script>
+		const modal = document.querySelector('.main-modal');
+		const closeButton = document.querySelectorAll('.modal-close');
+
+		const modalClose = () => {
+			modal.classList.remove('fadeIn');
+			modal.classList.add('fadeOut');
+			setTimeout(() => {
+				modal.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal = () => {
+			modal.classList.remove('fadeOut');
+			modal.classList.add('fadeIn');
+			modal.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton.length; i++) {
+
+			const elements = closeButton[i];
+
+			elements.onclick = (e) => modalClose();
+
+			modal.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose();
+			}
+		}
+
+        const modal_product = document.querySelector('.main-modal-product');
+		const closeButton_product = document.querySelectorAll('.modal-close-product');
+
+		const modalClose_product = () => {
+			modal_product.classList.remove('fadeIn');
+			modal_product.classList.add('fadeOut');
+			setTimeout(() => {
+				modal_product.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal_product = () => {
+			modal_product.classList.remove('fadeOut');
+			modal_product.classList.add('fadeIn');
+			modal_product.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton_product.length; i++) {
+
+			const elements = closeButton_product[i];
+
+			elements.onclick = (e) => modalClose_product();
+
+			modal_product.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose_product();
+			}
+		}
+
+        const modal_msg = document.querySelector('.main-modal-msg');
+		const closeButton_msg = document.querySelectorAll('.modal-close-msg');
+
+		const modalClose_msg = () => {
+			modal_msg.classList.remove('fadeIn');
+			modal_msg.classList.add('fadeOut');
+			setTimeout(() => {
+				modal_msg.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal_msg = () => {
+			modal_msg.classList.remove('fadeOut');
+			modal_msg.classList.add('fadeIn');
+			modal_msg.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton_msg.length; i++) {
+
+			const elements = closeButton_msg[i];
+
+			elements.onclick = (e) => modalClose_msg();
+
+			modal_msg.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose_msg();
+			}
+		}
+
+        // Click to order detail
+        function swapOrder() {
+            document.getElementById("managment-order").classList.toggle('hidden');
+            document.getElementById("list-order").classList.toggle('hidden');
+        }
+        const orderItem = document.getElementsByClassName("order-item");
+        Array.from(orderItem).forEach(function(element) {
+            element.addEventListener('click', swapOrder);
+        });
+        document.getElementById("back-to-order").addEventListener('click', swapOrder);
+
+	</script>
+
+    <!-- ********************* -->
+    <!-- *** Global Styles ***-->
+    <!-- ********************* -->
+    <style>
+        .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+        .h-content {
+            height: calc(100vh - 4rem);
+        }
+
+        .h-chat {
+            height: calc(100vh - 10rem - 4rem);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .h-chat {
+                height: calc(100vh - 14rem - 4rem);
+            }
+        }
+
+        .custom-truncate-wrap {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .custom-truncate {
+            display: table-cell;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .tag-truncate {
+            max-width: 5rem;
+        }
+
+        .fade-element-row {
+            position: relative;
+        }
+
+        .fade-element-row:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .custom-number-input input:focus {
+            outline: none !important;
+        }
+
+        .custom-number-input button:focus {
+            outline: none !important;
+        }
+
+        .fb-msg-brand {
+            fill: #0078FF;
+        }
+
+        .bg-zort-brand {
+            background-color: #22285a;
+        }
+
+        .text-zort-brand {
+            color: #22285a;
+        }
+
+        .t-panel {
+            display: none;
+        }
+
+        .t-panel.active {
+            display: block;
+        }
+
+        .dropdown:hover > .dropdown-content,
+        .mouseover:hover .mouseover-content {
+            display: block;
+        }
+
+        .message > div:last-child .dropdown > .dropdown-content {
+            bottom: 100%;
+        }
+
+    </style>
+</body>
+
+</html>
