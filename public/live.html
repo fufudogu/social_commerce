@@ -20,7 +20,7 @@
         <!-- ********************* -->
         <!-- *** Topbar Section ***-->
         <!-- ********************* -->
-        <nav id="topbar-section" class="bg-white border-b border-gray-300">
+        <nav id="topbar-section" class="hidden bg-white border-b border-gray-300">
             <div class="mx-auto px-2 px-4">
                 <div class="relative flex items-center justify-between h-16">
 
@@ -177,68 +177,18 @@
                 <!-- Agent App -->
                 <!-- ///////////////////////// -->
                 <div class="border-b lg:border-none border-gray-500">
-                    <div class="dropdown relative">
+                    <div class="relative">
                         <div class="lg:flex items-center justify-center py-2 px-4 lg:px-0" title="Messenger">
                             <div class="inline-flex items-center cursor-pointer">
-                                <!-- Brand Icon -->
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-white">
-                                    <svg width="24" height="24" class="fb-msg-brand" xmlns="http://www.w3.org/2000/svg"
-                                        fill-rule="evenodd" clip-rule="evenodd">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm0 5.5c-3.866 0-7 2.902-7 6.481 0 2.04 1.018 3.86 2.609 5.048v2.471l2.383-1.308c.636.176 1.31.271 2.008.271 3.866 0 7-2.902 7-6.482 0-3.579-3.134-6.481-7-6.481zm.696 8.728l-1.783-1.901-3.478 1.901 3.826-4.061 1.826 1.901 3.435-1.901-3.826 4.061z" />
-                                    </svg>
+                                <div class="flex items-center justify-center h-10 w-10 text-white hover:text-gray-300 rounded-full">
+                                    <a href="#" class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                          </svg>
+                                    </a>
                                 </div>
-                                <!-- Brand Name -->
-                                <span class="ml-3 text-white font-kanit lg:hidden">Messager</span>
                             </div>
                         </div>
-                        <ul class="dropdown-content lg:w-60 lg:absolute top-0 -right-60 lg:hidden text-gray-700 lg:bg-gray-100 rounded-tr-md rounded-br-md lg:shadow-md z-70">
-                            <li>
-                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
-                                    <span class="flex items-center">
-                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=0D8ABC&amp;color=fff">
-                                        <span class="mx-3 custom-truncate-wrap">
-                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
-                                                โฟโต้ คอนเนอร์
-                                            </p>
-                                        </span>
-                                    </span>
-                                    <span class="text-right">
-                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
-                                    <span class="flex items-center">
-                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=ccff33&amp;color=000">
-                                        <span class="mx-3 custom-truncate-wrap">
-                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
-                                                ผักสดโอมายก็อด 
-                                            </p>
-                                        </span>
-                                    </span>
-                                    <span class="text-right">
-                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex justify-between items-center py-2 px-4 font-kanit hover:underline">
-                                    <span class="flex items-center">
-                                        <img class="w-8 h-8 object-cover rounded-full" alt="User avatar" src="https://ui-avatars.com/api/?background=33eeff&amp;color=000">
-                                        <span class="mx-3 custom-truncate-wrap">
-                                            <p class="custom-truncate text-white lg:text-gray-600 text-sm text-left">
-                                                Hee Sun Kwang Shop 
-                                            </p>
-                                        </span>
-                                    </span>
-                                    <span class="text-right">
-                                        <span class="inline-block h-2 w-2 bg-red-400 rounded-full"></span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -267,7 +217,7 @@
             <div id="w-full-setion" class="h-content bg-white overflow-y-auto w-screen absolute border-l lg:static transition bg-gray-50">
                 <div class="h-20 p-6 pb-3 pt-3 border-b bg-white">
                     <!-- This example requires Tailwind CSS v2.0+ -->
-                    <div class="lg:flex lg:items-center lg:justify-between">
+                    <div class="flex items-center justify-between">
                         <div class="flex-1 min-w-0">
                             <h2 class="text-lg font-kanit leading-7">
                                 ไลฟ์สตรีม : ขายของ 9.9 ลด 50% ทั้งร้าน
@@ -321,8 +271,8 @@
                             </div>
                             <div class="h-full flex justify-center items-center">
                                 <div class="text-center my-4">
-                                    <img src="" alt="ใส่รูปกราฟฟิก" class="mb-4"/>
-                                    <p class="max-w-xs font-kanit text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <img src="img/demo-2.jpg" alt="ใส่รูปกราฟฟิก" class="mb-4 mx-auto w-96"/>
+                                    <p class="max-w-xs mx-auto font-kanit text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <a href="#" onclick="openModal()" class="inline-block mt-4 px-5 py-1 border border-gray-300 font-kanit rounded-full bg-white hover:bg-gray-200">
                                         <svg class="inline-block w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
@@ -334,8 +284,8 @@
                         <div class="p-6">
                             <div class="h-full flex justify-center items-center">
                                 <div class="text-center my-4">
-                                    <img src="" alt="ใส่รูปกราฟฟิก" class="mb-4"/>
-                                    <p class="max-w-xs font-kanit text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <img src="img/demo-2.jpg" alt="ใส่รูปกราฟฟิก" class="mb-4 mx-auto w-96"/>
+                                    <p class="max-w-xs mx-auto font-kanit text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <button type="button" onclick="openModal_connect()" class="inline-flex mt-4 items-center px-5 py-1 border border-transparent rounded-full text-base text-sm font-kanit text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -1146,7 +1096,7 @@
             font-family: 'Kanit', sans-serif;
         }
         .h-content {
-            height: calc(100vh - 4rem);
+            height: calc(100vh - 4rem) - 1px;
         }
 
         .h-chat {
@@ -1154,6 +1104,9 @@
         }
         .h-live {
             height: calc(100vh - 5rem - 4rem - 1px);
+        }
+        .h-live-chat {
+            height: calc(100vh - 5rem - 1px - 2.5rem - 7rem - 1px);
         }
 
         @media only screen and (min-width: 1024px) {
