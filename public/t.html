@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="p-24 bg-gray-100">
+    <div class="mb-4">
+        <button type="button" class="p-2 bg-green-100 border foo"><i class="fal fa-link"></i>xxx</button>
+        <div class="hidden popup a1">
+            <div class="inline-flex items-center p-1 pl-2 pr-2 bg-white rounded-lg shadow">
+                <p class="mb-0 mr-2 text-sm grey-400">ส่งลิ้งชำระเงินให้ลูกค้าได้ทันที</p>
+                <button type="" class="p-1 m-0 text-white bg-blue-400 rounded"><i class="fal fa-copy"></i> คัดลอก</button>
+            </div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <button type="button" class="p-2 bg-green-100 border foo"><i class="fal fa-link"></i>xxx</button>
+        <div class="hidden popup a2">
+            <div class="inline-flex items-center p-1 pl-2 pr-2 bg-white rounded-lg shadow">
+                <p class="mb-0 mr-2 text-sm grey-400">ส่งลิ้งชำระเงินให้ลูกค้าได้ทันที</p>
+                <button type="" class="p-1 m-0 text-white bg-blue-400 rounded"><i class="fal fa-copy"></i> คัดลอก</button>
+            </div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <button type="button" class="p-2 bg-green-100 border foo"><i class="fal fa-link"></i>xxx</button>
+        <div class="hidden popup a3">
+            <div class="inline-flex items-center p-1 pl-2 pr-2 bg-white rounded-lg shadow">
+                <p class="mb-0 mr-2 text-sm grey-400">ส่งลิ้งชำระเงินให้ลูกค้าได้ทันที</p>
+                <button type="" class="p-1 m-0 text-white bg-blue-400 rounded"><i class="fal fa-copy"></i> คัดลอก</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll('.foo').forEach(item => {
+        item.addEventListener('click', event => {
+            //handle click
+            //var elements = document.getElementsByClassName('popup');
+            item.nextSibling.nextSibling.classList.toggle("hidden");
+
+            
+            //document.querySelectorAll();
+            //console.log(item.nextSibling.nextSibling.classList.toggle('block'));
+        })
+    });
+
+
+</script>
+</html>
