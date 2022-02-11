@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="outer-section" class="flex flex-col h-screen">
+        
+        <!-- ********************* -->
+        <!-- *** Topbar Section ***-->
+        <!-- ********************* -->
+        <nav id="topbar-section" class="hidden bg-white border-b border-gray-300">
+            <div class="px-2 px-4 mx-auto">
+                <div class="relative flex items-center justify-between h-16">
+
+                    <!-- ### Mobile ### -->
+                    <!-- Go To ZORT -->
+                    <!-- State Channel -->
+                    <div id="back-to-zort" class="flex items-center hidden lg:hidden">
+                        <a href="#"
+                            class="inline-flex items-center justify-center py-2 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg> กลับไปที่ ZORT
+                        </a>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- Back Button -->
+                    <!-- State User, Chat -->
+                    <div id="back-button" class="flex items-center lg:hidden">
+                        <a href="#"
+                            class="inline-flex items-center justify-center py-2 text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                              </svg> กลับ
+                        </a>
+                    </div>
+
+                    <!-- Logo -->
+                    <div id="logo" class="hidden lg:block">
+                        <a href="#">
+                            <img class="w-auto mx-2 h-7" src="img/zort-social-logo-fit.png" alt="ZORT Social Commerce">
+                        </a>
+                    </div>
+
+                    <!-- ### Desktop & Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Channel, User -->
+                    <!-- ///////////////////////// -->
+                    <div id="user-state" class="flex items-center">
+
+                        <!-- Profile dropdown -->
+                        <div class="relative ml-3">
+                            <button
+                                class="flex items-center p-2 text-sm text-left bg-gray-100 rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white"
+                                data-popup="popup-toggle">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-6 h-6 mr-2 rounded-full pointer-events-none"
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="">
+                                <span class="w-24 mr-2 text-sm text-gray-600 truncate pointer-events-none">อดิศักดิ์</span>
+                                <svg class="w-4 h-4 transition-transform pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="absolute right-0 z-50 hidden w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg z-70 ring-1 ring-black ring-opacity-5"
+                                data-popup="popup-panel">
+                                <a href="#"
+                                    class="flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="w-6 h-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-sm text-gray-600 truncate pointer-events-none">สมชาย</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="w-6 h-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-sm text-gray-600 truncate pointer-events-none">ฉัตรชัย</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem"
+                                    data-popup="popup-close">
+                                    <img class="w-6 h-6 mr-2 rounded-full pointer-events-none"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="">
+                                    <span class="w-32 mr-2 text-sm text-gray-600 truncate pointer-events-none">กนกวรรณ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Chat -->
+                    <!-- ///////////////////////// -->
+                    <div id="chat-name-state"
+                        class="flex items-center justify-center flex-1 hidden -mr-16 lg:items-stretch lg:justify-start lg:hidden">
+                        <div class="flex items-center flex-shrink-0">
+                            <div class="flex items-center text-sm rounded-full">
+                                <img class="w-6 h-6 mr-2 rounded-full"
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                    alt="">
+                                <span class="w-16 mr-2 text-sm text-gray-600 truncate md:w-24">อดิศักดิ์</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chat-createorder-state" class="hidden lg:hidden">
+                        <a href="#" class="text-sm text-blue-600">สร้างรายการ</a>
+                    </div>
+
+                    <!-- ### Mobile ### -->
+                    <!-- ///////////////////////// -->
+                    <!-- State Order -->
+                    <!-- ///////////////////////// -->
+                    <div id="order-state" class="flex items-center justify-end flex-1 hidden lg:hidden">
+                        <div class="inline-flex items-center">
+                            <label class="hidden mr-2 text-xs text-gray-500 md:block">รายการขาย</label>
+                            <div class="relative inline-flex">
+                                <svg class="absolute top-0 right-0 w-2 h-2 m-3 pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                                    <path
+                                        d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                                        fill="#648299" fill-rule="nonzero"></path>
+                                </svg>
+                                <select
+                                    class="h-8 pl-3 text-gray-600 bg-white border border-gray-300 rounded-md appearance-none pr-7 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                    <option>IV-202102004</option>
+                                    <option>IV-202102005</option>
+                                    <option>SO-202101027</option>
+                                    <option>362411556118020</option>
+                                    <option>IV-202102001</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav> <!--*** End Topbar Section ***-->
+
+        <!-- Wrapper Secion -->
+        <div id="wrapper-section" class="flex flex-1 overflow-x-hidden">
+
+            <!-- ********************** -->
+            <!-- *** Channel Section ***-->
+            <!-- ********************** -->
+            <div id="channel-section"
+                class="absolute w-screen h-content bg-zort-brand lg:w-16 lg:static">
+
+                <h2 class="px-4 py-2 text-sm text-white font-kanit lg:hidden">ช่องทางการขาย</h2>
+
+                <!-- ///////////////////////// -->
+                <!-- Agent App -->
+                <!-- ///////////////////////// -->
+                <div class="border-b border-gray-500 lg:border-none">
+                    <div class="relative">
+                        <div class="items-center justify-center px-4 py-2 lg:flex lg:px-0" title="Messenger">
+                            <div class="inline-flex items-center cursor-pointer">
+                                <div class="flex items-center justify-center w-10 h-10 text-white rounded-full hover:text-gray-300">
+                                    <a href="#" class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                          </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ///////////////////////// -->
+                <!-- Setting -->
+                <!-- ///////////////////////// -->
+                <div class="absolute inset-x-0 bottom-0 p-3 bg-white lg:hidden">
+                    <button
+                        class="w-full px-3 py-1 text-left text-gray-500 align-top rounded-full appearance-none lg:hidden hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                        <svg class="inline-block w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="text-sm">ตั้งค่า</span>
+                    </button>
+                </div>
+            </div>  <!--*** End Channel Section ***-->
+
+            <!-- ********************* -->
+            <!-- *** Full Width Template Section ***-->
+            <!-- ********************* -->
+            <div id="w-full-setion" class="absolute w-screen overflow-y-auto transition bg-white border-l h-content lg:static bg-gray-50">
+                <div class="h-20 p-6 pt-3 pb-3 bg-white border-b">
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-lg leading-7 font-kanit">
+                                ไลฟ์สตรีม : ขายของ 9.9 ลด 50% ทั้งร้าน
+                            </h2>
+                            <div class="flex flex-row space-x-3">
+                                <span class="px-3 py-1 mt-1 text-sm leading-none text-center text-gray-600 bg-gray-100 rounded-md font-kanit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 mr-1 align-bottom" viewBox="126.445 2.281 589 589"><circle cx="420.945" cy="296.781" r="294.5" fill="#3c5a9a"/><path fill="#fff" d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z"/></svg>
+                                    <span>ร้านถุงเท้า 5 บาท</span>
+                                </span>
+                                <span class="px-3 py-1 mt-1 text-sm leading-none text-center text-yellow-600 bg-gray-100 rounded font-kanit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 mr-1 align-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                                    </svg>
+                                    <span>กำลังจัดเตรียม</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-5 lg:mt-0 lg:ml-4">
+                            <a href="#" class="px-4 py-1 text-sm text-center text-gray-600 bg-white border border-transparent rounded-full font-kanit hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1.5 h-5 w-5 align-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="">ตั้งค่า</span>
+                            </a>
+                            <a href="#" class="px-4 py-1 text-sm text-center text-gray-600 bg-white border border-transparent rounded-full font-kanit hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
+                                <span class="">รูปแบบข้อความ</span>
+                            </a>
+                            <a href="#" class="px-4 py-1 ml-5 text-base font-medium text-center text-gray-600 bg-white border border-gray-600 rounded-full font-kanit hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1.5 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                                <span class="">บันทึกร่าง</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="h-live">
+                    <div class="grid h-full grid-cols-2 divide-x">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between hidden mb-2">
+                                <h2 class="text-base leading-7 font-kanit">รายการสินค้าที่ขายในไลฟ์</h2>
+                                <a href="#" class="px-3 py-1 text-sm text-center bg-white border border-gray-300 rounded-full font-kanit hover:bg-gray-200">
+                                    <svg class="inline-block w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg> เลือกสินค้า
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-center h-full">
+                                <div class="my-4 text-center">
+                                    <img src="img/demo-2.jpg" alt="ใส่รูปกราฟฟิก" class="mx-auto mb-4 w-96"/>
+                                    <p class="max-w-xs mx-auto text-gray-400 font-kanit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <a href="#" onclick="openModal()" class="inline-block px-5 py-1 mt-4 bg-white border border-gray-300 rounded-full font-kanit hover:bg-gray-200">
+                                        <svg class="inline-block w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                        </svg> เลือกสินค้า
+                                    </a>
+                                </div>
+                            </div>        
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="my-4 text-center">
+                                    <img src="img/demo-2.jpg" alt="ใส่รูปกราฟฟิก" class="mx-auto mb-4 w-96"/>
+                                    <p class="max-w-xs mx-auto text-gray-400 font-kanit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <button type="button" onclick="openModal_connect()" class="inline-flex items-center px-5 py-1 mt-4 text-sm text-base text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                        </svg>
+                                        เชื่อมต่อกับ Facebook
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div> <!--*** Full Width Template Section ***-->
+
+
+        </div>
+    </div>
+    <div id="overlay" class="fixed inset-0 z-50 hidden w-screen h-screen bg-transparent"></div>
+    <div id="loading" class="fixed inset-0 hidden w-screen h-screen bg-white z-100">
+        <div class="flex items-center justify-around h-full">
+            <span class="inline-flex">
+              <div class="inline-flex items-center px-4 py-2 text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent active:bg-rose-700">
+                <svg class="w-5 h-5 mr-3 -ml-1 text-black animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span class="font-kanit">โปรดรอสักครู่</span>
+            </div>
+            </span>
+          </div>
+    </div>
+
+    <div class="fixed inset-0 z-50 flex items-center justify-center w-full overflow-hidden main-modal h-100 animated fadeIn faster"
+		style="background: rgba(0,0,0,.7);">
+		<div
+			class="z-50 w-11/12 max-w-4xl mx-auto overflow-y-auto bg-white border border-teal-500 rounded shadow-lg modal-container h-5/6">
+			<div class="px-6 py-4 text-left modal-content">
+				<!--Title-->
+				<div class="flex items-center justify-between">
+					<p class="text-xl font-kanit">เลือกรายการสินค้า</p>
+					<div class="z-50 cursor-pointer modal-close">
+						<svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+							viewBox="0 0 18 18">
+							<path
+								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<!--Body-->
+				<div class="my-5">
+                    <div class="relative flex py-2">
+                        <div class="relative text-gray-600 w-72">
+                            <input type="search" name="serch" placeholder="พิมพ์รหัส, ชื่อสินค้า" class="w-full h-10 px-4 pl-10 text-sm bg-white border rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                            <svg class="absolute w-4 h-4 fill-current left-3 top-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                            </svg>
+                        </div>
+                        <div class="absolute left-0 hidden w-5/6 overflow-y-auto bg-white border rounded-md shadow-sm top-14 h-72">
+                            <ul class="divide-y divide-gray-100">
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex items-center px-2 py-2 hover:bg-gray-100">
+                                    <div class="mr-3">
+                                        <img src="https://via.placeholder.com/50" class="" alt=""/>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-sm">name</h3>
+                                        <div class="grid grid-cols-3 gap-5">
+                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$90</span></div>
+                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">100</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class="inline-block px-4 py-1 text-xs font-light text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            เลือกสินค้า
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 class="mt-4 mb-2 font-kanit">รายการที่เลือก</h2>
+
+                    <!-- Blank Item -->
+                    <div class="hidden p-4 border rounded-md max-h-96 h-60">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block w-12 h-12 m-auto mb-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                  </svg>
+                                <p class="mb-1 text-gray-400 font-kanit">ไม่มีรายการสินค้า</p>
+                                <p class="text-sm font-light text-gray-400 font-kanit">ค้นหาสินค้าจากช่องค้นหาด้านบน</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show Item -->
+                    <div class="flex flex-col">
+                        <div class="overflow-hidden border-b border-gray-200 rounded-lg shadow">
+                            <table class="w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-gray-500 uppercase font-kanit">
+                                        ชื่อสินค้า
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        รหัส CF
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        จำนวนที่ขาย
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        ราคาที่ขาย
+                                    </th>
+                                    <th scope="col" class="w-12 px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase font-kanit">
+                                        
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr class="">
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <button class="flex items-center gap-1 p-1.5 rounded-md hover:bg-gray-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                  </svg><span class="text-sm text-gray-400">ลบสินค้าทั้งหมด</span>
+                                            </button>
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <div class="relative flex flex-col items-center justify-end">
+                                                <input type="text" placeholder="0" class="w-full px-2 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                                <div class="absolute top-0 z-20 flex bg-white border border-gray-300 -right-14 rounded-tr-md rounded-br-md">
+                                                    <button class="px-1.5 py-1 hover:bg-gray-100">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400 hover:text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                    </button>
+                                                    <button class="px-1.5 py-1 rounded-br-md rounded-tr-md hover:bg-gray-100 text-gray-400 hover:text-red-500">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <div class="relative flex items-center justify-end">
+                                                <div class="cursor-pointer group">
+                                                    <button class="p-1.5 rounded-md hover:bg-gray-100">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                                        </svg>
+                                                    </button>
+                                                    <div class="absolute bottom-0 flex flex-col items-center hidden mb-8 rounded left-8 group-hover:flex">
+                                                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">แก้ไขทั้งหมด</span>
+                                                        <div class="w-3 h-3 ml-2 -mt-2 transform rotate-45 bg-black"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                        <td class="text-center">
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/10/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เสื้อผ้าแฟชั่นแนวญี่ปุ่น
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$179</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">50</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/7/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        รองเท้า
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB002</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$3,890</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">15</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/4/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        กระเป๋าหนังลายจระเข้
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">ZA008</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$9,000</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">30</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/1/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เสื้อขอกลมตาห่านคู่
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">FP443</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$129</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">498</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/21/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เครื่อง Play Station 5
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">PS131</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$31,000</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">3</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <a href="#" class="inline-block px-8 py-1 mt-4 text-base font-medium text-center text-white bg-indigo-600 border border-transparent rounded-full font-kanit hover:bg-indigo-700">
+                            ยืนยัน
+                        </a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="fixed inset-0 z-50 flex items-center justify-center w-full overflow-hidden main-modal-connect h-100 animated fadeIn faster"
+		style="background: rgba(0,0,0,.7);">
+		<div
+			class="z-50 w-11/12 max-w-4xl mx-auto overflow-y-auto bg-white border border-teal-500 rounded shadow-lg modal-container h-5/6">
+			<div class="px-6 py-4 text-left modal-content">
+				<!--Title-->
+				<div class="flex items-center justify-between">
+					<p class="text-xl font-kanit">เชื่อมต่อกับไลฟ์</p>
+					<div class="z-50 cursor-pointer modal-close-connect">
+						<svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+							viewBox="0 0 18 18">
+							<path
+								d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+							</path>
+						</svg>
+					</div>
+				</div>
+				<!--Body-->
+				<div class="my-5">
+                    <!-- Start -->
+                    <div class="hidden p-4 h-live lg:p-6">
+                        <div class="grid h-full grid-cols-1 gap-4 divide-x">
+                            <div class="">
+                                <div class="flex items-center justify-center h-full">
+                                    <div class="my-4 text-center">
+                                        <img src="" alt="ใส่รูปกราฟฟิก" class="mb-4"/>
+                                        <h3 class="">สร้าง Live ที่ Facebook</h3>
+                                        <p class="max-w-xs text-gray-400 font-kanit">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <button type="button" onclick="openModal_connect()" class="inline-flex items-center px-5 py-1 mt-4 text-sm text-base text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            เชื่อมต่อกับ Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <h3 class="inline text-base font-kanit">Live ที่ถ่ายทอดสดอยู่บน Facebook</h3>
+                        </div>
+                        <div class="">
+                            <ul class="flex flex-col gap-2.5">
+                                <li class="flex items-center justify-between gap-3 px-3 py-1.5 border rounded-lg hover:bg-gray-50" >
+                                    <div class="flex-initial w-5/6">
+                                        <h3 class="mb-1 truncate font-kanit">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy</h3>
+                                        <p class="mb-3 overflow-hidden text-xs text-gray-400 overflow-ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <div class="inline-flex items-center gap-1 px-2 py-0.5 text-red-600 border border-red-600 rounded-md bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                            <span class="text-xs font-kanit">ถ่ายทอดสด</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-initial w-1/6 text-center">
+                                        <button type="button" class="inline-flex items-center px-5 py-1 mt-4 text-sm text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                            </svg>
+                                            เชื่อมต่อ
+                                        </button>    
+                                    </div>
+                                </li>
+                                <li class="flex items-center justify-between gap-3 px-3 py-1.5 border rounded-lg hover:bg-gray-50" >
+                                    <div class="flex-initial w-5/6">
+                                        <h3 class="mb-1 truncate font-kanit">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy</h3>
+                                        <p class="mb-3 overflow-hidden text-xs text-gray-400 overflow-ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <div class="inline-flex items-center gap-1 px-2 py-0.5 text-red-600 border border-red-600 rounded-md bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                            <span class="text-xs font-kanit">ถ่ายทอดสด</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-initial w-1/6 text-center">
+                                        <button type="button" class="inline-flex items-center px-5 py-1 mt-4 text-sm text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                            </svg>
+                                            เชื่อมต่อ
+                                        </button>    
+                                    </div>
+                                </li>
+                                <li class="flex items-center justify-between gap-3 px-3 py-1.5 border rounded-lg hover:bg-gray-50" >
+                                    <div class="flex-initial w-5/6">
+                                        <h3 class="mb-1 truncate font-kanit">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy</h3>
+                                        <p class="mb-3 overflow-hidden text-xs text-gray-400 overflow-ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <div class="inline-flex items-center gap-1 px-2 py-0.5 text-red-600 border border-red-600 rounded-md bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                            <span class="text-xs font-kanit">ถ่ายทอดสด</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-initial w-1/6 text-center">
+                                        <button type="button" class="inline-flex items-center px-5 py-1 mt-4 text-sm text-white bg-indigo-600 border border-transparent rounded-full appearance-none font-kanit hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 -ml-1" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                            </svg>
+                                            เชื่อมต่อ
+                                        </button>    
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+
+    <!-- Popup -->
+    <script>
+        function dropdown_popup(e) {
+            const elm = e.target.parentNode.parentElement.querySelector(
+                'button[data-popup="popup-toggle"]'
+            );
+            const target = elm.nextElementSibling;
+            target.classList.toggle('hidden');
+
+            if(target.id == "popup-tags") {
+                document.getElementById("popup-input-tags").focus();                
+            }
+
+            document.getElementById("overlay").classList.toggle('hidden');
+        }
+
+        const popupButtons = document.querySelectorAll(
+            `button[data-popup="popup-toggle"]`
+        );
+        popupButtons.forEach(elm => {
+            elm.addEventListener("click", dropdown_popup);
+        });
+    </script>
+
+    <!-- Custom input -->
+    <script>
+        function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+
+            if (Math.sign(value)) { value--; }
+            target.value = value;
+        }
+
+        function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value++;
+            target.value = value;
+        }
+
+        const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+        );
+        const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+        );
+        decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+        });
+        incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+        });
+    </script>
+
+    <!-- Tabs -->
+    <script>
+        function initTab(elem) {
+            document.addEventListener('click', function (e) {
+                if (!e.target.matches(elem + ' .t-btn')) return;
+                else {
+                    if (!e.target.classList.contains('active')) {
+                        findActiveElementAndRemoveIt(elem + ' .t-btn');
+                        findActiveElementAndRemoveIt(elem + ' .t-panel');
+                        e.target.classList.add('active', 'text-indigo-600', 'border-indigo-600');
+
+                        setTimeout(function () {
+                            var panel = document.querySelectorAll(elem + ' .t-panel.' + e.target.dataset
+                                .name);
+                            Array.prototype.forEach.call(panel, function (el) {
+                                el.classList.add('active');
+                            });
+                        }, 0);
+                    }
+                }
+            });
+        }
+
+        function findActiveElementAndRemoveIt(elem) {
+            var elementList = document.querySelectorAll(elem);
+
+            //console.log(elem, elementList);
+            Array.prototype.forEach.call(elementList, function (e) {
+                e.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+
+                //console.log(e);
+            });
+        }
+
+        initTab('.tabs');
+    </script>
+
+    <!-- Collapse -->
+    <script>
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+        const popuptriggers = Array.from(document.querySelectorAll('[data-popup="popup-toggle"]'));
+        const popupClosetriggers = Array.from(document.querySelectorAll('[data-popup="popup-close"]'));
+
+        window.addEventListener('click', (ev) => {
+            const elm = ev.target;
+
+            // Toggle Collapse
+            if (triggers.includes(elm)) {
+                const selector = elm.getAttribute('data-target');
+                collapse(selector, 'toggle');
+                
+                const child = elm.children[0];
+                child.classList.toggle('-rotate-90');
+            }
+
+            // Clear Overlay Popup
+            if(ev.target.id == "overlay") {
+                ev.target.classList.toggle('hidden');
+                clearDropdown();
+            }
+
+            // Clear Popup
+            if (popupClosetriggers.includes(elm)) {
+                document.getElementById("overlay").classList.toggle('hidden');
+                clearDropdown();
+            }
+
+        }, false);
+
+        const fnmap = {
+            'toggle': 'toggle',
+            'show': 'add',
+            'hide': 'remove'
+        };
+        const collapse = (selector, cmd) => {
+            const targets = Array.from(document.querySelectorAll(selector));
+            targets.forEach(target => {
+                //target.classList[fnmap[cmd]]('show');
+                target.classList[fnmap[cmd]]('hidden');
+            });
+        }
+
+        function clearDropdown() {
+            var popupToggle = document.querySelectorAll('[data-popup="popup-panel"]');
+            [].forEach.call(popupToggle, function(el) {
+                el.classList.add('hidden');
+            });
+        }
+    </script>
+
+    <!-- Modal -->
+    <script>
+		const modal = document.querySelector('.main-modal');
+		const closeButton = document.querySelectorAll('.modal-close');
+
+		const modalClose = () => {
+			modal.classList.remove('fadeIn');
+			modal.classList.add('fadeOut');
+			setTimeout(() => {
+				modal.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal = () => {
+			modal.classList.remove('fadeOut');
+			modal.classList.add('fadeIn');
+			modal.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton.length; i++) {
+
+			const elements = closeButton[i];
+
+			elements.onclick = (e) => modalClose();
+
+			modal.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose();
+			}
+		}
+
+        // -------- -------- -------- -------- -------- --------
+
+        const modal_connect = document.querySelector('.main-modal-connect');
+		const closeButton_connect = document.querySelectorAll('.modal-close-connect');
+
+		const modalClose_connect = () => {
+			modal_connect.classList.remove('fadeIn');
+			modal_connect.classList.add('fadeOut');
+			setTimeout(() => {
+				modal_connect.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal_connect = () => {
+			modal_connect.classList.remove('fadeOut');
+			modal_connect.classList.add('fadeIn');
+			modal_connect.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton_connect.length; i++) {
+
+			const elements = closeButton_connect[i];
+
+			elements.onclick = (e) => modalClose_connect();
+
+			modal_connect.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose_connect();
+			}
+		}
+
+        // -------- -------- -------- -------- -------- --------
+
+        const modal_msg = document.querySelector('.main-modal-msg');
+		const closeButton_msg = document.querySelectorAll('.modal-close-msg');
+
+		const modalClose_msg = () => {
+			modal_msg.classList.remove('fadeIn');
+			modal_msg.classList.add('fadeOut');
+			setTimeout(() => {
+				modal_msg.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal_msg = () => {
+			modal_msg.classList.remove('fadeOut');
+			modal_msg.classList.add('fadeIn');
+			modal_msg.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton_msg.length; i++) {
+
+			const elements = closeButton_msg[i];
+
+			elements.onclick = (e) => modalClose_msg();
+
+			modal_msg.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose_msg();
+			}
+		}
+
+        // Click to order detail
+        function swapOrder() {
+            document.getElementById("managment-order").classList.toggle('hidden');
+            document.getElementById("list-order").classList.toggle('hidden');
+        }
+        const orderItem = document.getElementsByClassName("order-item");
+        Array.from(orderItem).forEach(function(element) {
+            element.addEventListener('click', swapOrder);
+        });
+        document.getElementById("back-to-order").addEventListener('click', swapOrder);
+
+	</script>
+
+    <!-- ********************* -->
+    <!-- *** Global Styles ***-->
+    <!-- ********************* -->
+    <style>
+        .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+        .h-content {
+            height: calc(100vh - 4rem) - 1px;
+        }
+
+        .h-chat {
+            height: calc(100vh - 10rem - 4rem);
+        }
+        .h-live {
+            height: calc(100vh - 5rem - 4rem - 1px);
+        }
+        .h-live-chat {
+            height: calc(100vh - 5rem - 1px - 2.5rem - 7rem - 1px);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .h-chat {
+                height: calc(100vh - 14rem - 4rem);
+            }
+        }
+
+        .custom-truncate-wrap {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .custom-truncate {
+            display: table-cell;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .tag-truncate {
+            max-width: 5rem;
+        }
+
+        .fade-element-row {
+            position: relative;
+        }
+
+        .fade-element-row:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            pointer-events: none;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .custom-number-input input:focus {
+            outline: none !important;
+        }
+
+        .custom-number-input button:focus {
+            outline: none !important;
+        }
+
+        .fb-msg-brand {
+            fill: #0078FF;
+        }
+
+        .bg-zort-brand {
+            background-color: #22285a;
+        }
+
+        .text-zort-brand {
+            color: #22285a;
+        }
+
+        .t-panel {
+            display: none;
+        }
+
+        .t-panel.active {
+            display: block;
+        }
+
+        .dropdown:hover > .dropdown-content,
+        .mouseover:hover .mouseover-content {
+            display: block;
+        }
+
+        .message > div:last-child .dropdown > .dropdown-content {
+            bottom: 100%;
+        }
+
+    </style>
+</body>
+
+</html>
