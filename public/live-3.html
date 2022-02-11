@@ -308,10 +308,10 @@
                                                     <div class="bg-white border divide-y divide-gray-200 rounded-md divide-solid">
                                                         <div class="flex items-center justify-between p-2 py-1.5 bg-white">
                                                             <div>
-                                                                <label for="selected-all" class="flex items-center text-sm text-gray-400"><input type="checkbox" id="selected-all" class="mr-2"> เลือกทั้งหมด</label>
+                                                                <label for="selected-all" class="flex items-center text-xs text-gray-400"><input type="checkbox" id="selected-all" class="mr-2"> เลือกทั้งหมด</label>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="inline-flex items-center px-5 py-1 text-sm bg-white border border-transparent border-gray-300 rounded-full appearance-none font-kanit hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                                                <button type="button" onclick="openModal_edit()" class="inline-flex items-center px-5 py-1 text-sm bg-white border border-transparent border-gray-300 rounded-full appearance-none font-kanit hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
                                                                     แก้ไขกลุ่ม
                                                                 </button>
                                                             </div>
@@ -1482,15 +1482,15 @@
 		</div>
 	</div>
 
-    <div class="fixed inset-0 z-50 flex items-center justify-center w-full overflow-hidden main-modal-setting animated fadeIn faster"
+    <div class="fixed inset-0 z-50 flex items-center justify-center w-full overflow-hidden main-modal-edit animated fadeIn faster"
 		style="background: rgba(0,0,0,.7);">
 		<div
-			class="z-50 w-6/12 max-w-4xl mx-auto overflow-y-auto bg-white border border-teal-500 rounded shadow-lg modal-container">
+			class="z-50 w-11/12 max-w-4xl mx-auto overflow-y-auto bg-white border border-teal-500 rounded shadow-lg modal-container">
 			<div class="px-6 py-4 text-left modal-content">
 				<!--Title-->
 				<div class="flex items-center justify-between">
-					<p class="text-xl font-kanit">ตั้งค่า</p>
-					<div class="z-50 cursor-pointer modal-close-setting">
+					<p class="text-xl font-kanit">แก้ไขกลุ่ม</p>
+					<div class="z-50 cursor-pointer modal-close-edit">
 						<svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
 							viewBox="0 0 18 18">
 							<path
@@ -1501,8 +1501,316 @@
 				</div>
 				<!--Body-->
 				<div class="my-5">
+                    
+                    <!-- Blank Item -->
+                    <div class="hidden p-4 border rounded-md max-h-96 h-60">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block w-12 h-12 m-auto mb-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                  </svg>
+                                <p class="mb-1 text-gray-400 font-kanit">ไม่มีรายการสินค้า</p>
+                                <p class="text-sm font-light text-gray-400 font-kanit">ค้นหาสินค้าจากช่องค้นหาด้านบน</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Show Item -->
-                    xxx
+                    <div class="flex flex-col">
+                        <div class="overflow-hidden border-b border-gray-200 rounded-lg shadow">
+                            <table class="w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-gray-500 uppercase font-kanit">
+                                        ชื่อสินค้า
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        รหัส CF
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        จำนวนที่ขาย
+                                    </th>
+                                    <th scope="col" class="px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase w-28 font-kanit">
+                                        ราคาที่ขาย
+                                    </th>
+                                    <th scope="col" class="w-12 px-3 py-3 text-xs font-light tracking-wider text-left text-right text-gray-500 uppercase font-kanit">
+                                        
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr class="">
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <button class="flex items-center gap-1 p-1.5 rounded-md hover:bg-gray-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                  </svg><span class="text-sm text-gray-400">ลบสินค้าทั้งหมด</span>
+                                            </button>
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <div class="relative flex flex-col items-center justify-end">
+                                                <input type="text" placeholder="0" class="w-full px-2 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                                <div class="absolute top-0 z-20 flex bg-white border border-gray-300 -right-14 rounded-tr-md rounded-br-md">
+                                                    <button class="px-1.5 py-1 hover:bg-gray-100">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400 hover:text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                    </button>
+                                                    <button class="px-1.5 py-1 rounded-br-md rounded-tr-md hover:bg-gray-100 text-gray-400 hover:text-red-500">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-1.5 whitespace-nowrap">
+                                            <div class="relative flex items-center justify-end">
+                                                <div class="cursor-pointer group">
+                                                    <button class="p-1.5 rounded-md hover:bg-gray-100">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                                        </svg>
+                                                    </button>
+                                                    <div class="absolute bottom-0 flex flex-col items-center hidden mb-8 rounded left-8 group-hover:flex">
+                                                        <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">แก้ไขทั้งหมด</span>
+                                                        <div class="w-3 h-3 ml-2 -mt-2 transform rotate-45 bg-black"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                        <td class="text-center">
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/10/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เสื้อผ้าแฟชั่นแนวญี่ปุ่น
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB001</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$179</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">50</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/7/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        รองเท้า
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">AB002</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$3,890</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">15</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/4/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        กระเป๋าหนังลายจระเข้
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">ZA008</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$9,000</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">30</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/1/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เสื้อขอกลมตาห่านคู่
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">FP443</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$129</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">498</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 w-10 h-10">
+                                                    <img src="https://picsum.photos/id/21/50" class="" alt=""/>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <div class="text-sm font-medium">
+                                                        เครื่อง Play Station 5
+                                                    </div>
+                                                    <div class="text-sm leading-4">
+                                                        <div class="grid grid-cols-3 gap-5 mt-1">
+                                                            <div class=""><span class="text-xs font-light font-kanit">รหัสสินค้า :</span> <span class="text-gray-400">PS131</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">ราคาขาย :</span> <span class="text-gray-400">$31,000</span></div>
+                                                            <div class=""><span class="text-xs font-light font-kanit">คงเหลือ :</span> <span class="text-gray-400">3</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="Code" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="px-3 py-4 whitespace-nowrap">
+                                            <input type="text" placeholder="0" class="w-full px-2 py-1 text-right border border-gray-300 rounded appearance-none hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white">
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="relative inline-flex rounded-full cursor-pointer group hover:bg-gray-100">
+                                                <button class="flex items-center justify-center w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 text-gray-400 hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                <span class="absolute z-50 flex flex-col items-center hidden w-20 mb-6 rounded -top-10 -left-7 group-hover:flex">
+                                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black rounded shadow-lg">ลบ</span>
+                                                    <span class="w-3 h-3 transform rotate-45 -translate-y-2 bg-black -translate-x-0"></span>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <a href="#" class="inline-block px-8 py-1 mt-4 text-base font-medium text-center text-white bg-indigo-600 border border-transparent rounded-full font-kanit hover:bg-indigo-700">
+                            ยืนยัน
+                        </a>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -1758,6 +2066,38 @@
 
 			window.onclick = function (event) {
 				if (event.target == modal) modalClose_setting();
+			}
+		}
+
+        // -------- -------- -------- -------- -------- --------
+
+        const modal_edit = document.querySelector('.main-modal-edit');
+		const closeButton_edit = document.querySelectorAll('.modal-close-edit');
+
+		const modalClose_edit = () => {
+			modal_edit.classList.remove('fadeIn');
+			modal_edit.classList.add('fadeOut');
+			setTimeout(() => {
+				modal_edit.style.display = 'none';
+			}, 0);
+		}
+
+		const openModal_edit = () => {
+			modal_edit.classList.remove('fadeOut');
+			modal_edit.classList.add('fadeIn');
+			modal_edit.style.display = 'flex';
+		}
+
+		for (let i = 0; i < closeButton_edit.length; i++) {
+
+			const elements = closeButton_edit[i];
+
+			elements.onclick = (e) => modalClose_edit();
+
+			modal_edit.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose_edit();
 			}
 		}
 
